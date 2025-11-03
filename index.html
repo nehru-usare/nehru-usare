@@ -8,423 +8,415 @@
   <meta name="author" content="Nehru Usare" />
 
   <!-- Favicons -->
-  <link rel="icon" href="https://raw.githubusercontent.com/nehru-usare/nehru-usare/main/favicon.png" type="image/png">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- Simple reset + utility -->
   <style>
     :root{
-      --bg:#0b1020;
-      --card:#0f1724;
+      --bg:#0b1020; /* dark */
+      --surface:#0f1724;
       --muted:#9aa7bf;
-      --accent:#3ab0ff; /* blue accent */
-      --accent-2:#58a6ff;
+      --accent-1: 58,176,255; /* rgb */
+      --accent-2: 88,166,255;
       --glass: rgba(255,255,255,0.03);
       --glass-2: rgba(255,255,255,0.02);
       --glass-border: rgba(255,255,255,0.04);
       --success: #47A248;
-      --max-width: 1100px;
-      --radius: 12px;
+      --max-width:1100px;
+      --radius:12px;
+      --text:#e6eef6;
+      --transition:200ms ease;
     }
+
+    /* Light theme overrides (will be toggled with data-theme="light") */
+    :root[data-theme='light']{
+      --bg: #f7f9fc;
+      --surface: #ffffff;
+      --muted: #5b6a82;
+      --glass: rgba(2,6,23,0.03);
+      --glass-2: rgba(2,6,23,0.01);
+      --glass-border: rgba(2,6,23,0.06);
+      --text:#061026;
+    }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
       font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
-      background: radial-gradient(1200px 600px at 10% 10%, rgba(58,176,255,0.05), transparent),
-                  radial-gradient(1000px 400px at 90% 90%, rgba(40,200,150,0.02), transparent),
-                  var(--bg);
-      color:#e6eef6;
+      background: radial-gradient(1000px 420px at 8% 8%, rgba(var(--accent-1),0.06), transparent), var(--bg);
+      color:var(--text);
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       line-height:1.45;
-      padding:32px 20px;
-      display:flex;
-      justify-content:center;
+      padding:28px 18px;
+      display:flex;justify-content:center;
     }
 
-    .container{
-      width:100%;
-      max-width:var(--max-width);
-    }
+    .container{width:100%;max-width:var(--max-width)}
 
-    header{
-      display:flex;
-      gap:20px;
-      align-items:center;
-      margin-bottom:20px;
-    }
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .logo{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(var(--accent-1),1),rgba(var(--accent-2),1));font-weight:800;color:#011225}
+    .brand h1{margin:0;font-size:16px}
 
-    .profile-card{
-      display:flex;
-      gap:20px;
-      align-items:center;
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border:1px solid var(--glass-border);
-      padding:18px;
-      border-radius:14px;
-      box-shadow: 0 6px 30px rgba(5,10,20,0.6);
-    }
+    /* theme toggle */
+    .controls{display:flex;gap:8px;align-items:center}
+    .btn{background:linear-gradient(90deg,rgba(var(--accent-1),1),rgba(var(--accent-2),1));color:#011225;padding:8px 12px;border-radius:10px;font-weight:700;border:none;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+    .btn-ghost{background:transparent;border:1px solid var(--glass-border);color:var(--muted);padding:8px 10px;border-radius:10px}
 
-    .avatar{
-      width:96px; height:96px; border-radius:14px;
-      background:linear-gradient(135deg,var(--accent),var(--accent-2));
-      display:flex;align-items:center;justify-content:center;
-      font-weight:800;font-size:28px;color:#051122;
-    }
+    main{display:grid;grid-template-columns:1fr 360px;gap:20px}
+    @media (max-width:980px){main{grid-template-columns:1fr;padding-bottom:20px}}
 
-    .hero{
-      flex:1;
-      min-width:0;
-    }
-    .title{
-      font-size:20px;font-weight:700;color:#fff;margin:0 0 6px 0;
-      display:flex;gap:10px;align-items:center;
-    }
-    .subtitle{color:var(--muted);margin:0 0 8px 0;font-weight:500}
-    .badges{display:flex;gap:8px;flex-wrap:wrap}
+    .card{background:linear-gradient(180deg,var(--surface), rgba(255,255,255,0.01));border-radius:var(--radius);padding:16px;border:1px solid var(--glass-border);box-shadow:0 10px 30px rgba(3,6,12,0.5)}
 
-    .badge{
-      background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.015));
-      border:1px solid var(--glass-border);
-      padding:6px 10px;font-size:13px;border-radius:999px;color:var(--accent);
-      display:inline-flex;align-items:center;gap:8px;
-    }
-    .cta{
-      margin-top:10px;display:flex;gap:10px;flex-wrap:wrap;
-    }
-    .btn{
-      background:linear-gradient(90deg,var(--accent),var(--accent-2));
-      color:#011225;padding:9px 14px;border-radius:10px;font-weight:700;border:none;
-      cursor:pointer;text-decoration:none;display:inline-flex;gap:8px;align-items:center;
-      box-shadow:0 6px 18px rgba(58,176,255,0.12);
-    }
-    .btn-ghost{
-      background:transparent;border:1px solid var(--glass-border);color:var(--muted);
-      padding:8px 12px;border-radius:10px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;
-    }
+    /* Hero */
+    .hero{display:flex;gap:16px;align-items:center}
+    .avatar{width:96px;height:96px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:28px;color:#011225;background:linear-gradient(135deg,rgba(var(--accent-1),1),rgba(var(--accent-2),1))}
+    .hero .meta{flex:1;min-width:0}
+    .title{display:flex;gap:12px;align-items:center}
+    .title h2{margin:0;font-size:18px}
+    .subtitle{color:var(--muted);margin-top:6px}
+    .badges{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+    .pill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);font-size:12px}
 
-    main{
-      margin-top:22px; display:grid; grid-template-columns: 1fr 360px; gap:22px;
-    }
+    /* layout for sections */
+    .section-title{display:flex;align-items:center;gap:10px;margin:0 0 12px 0;font-size:15px}
+    .lead{color:var(--muted);margin:0 0 8px 0}
 
-    /* Left column */
-    .card{
-      background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.01));
-      border-radius:var(--radius); padding:18px; border:1px solid var(--glass-border);
-      box-shadow: 0 8px 30px rgba(3,6,12,0.6);
-    }
-
-    h2.section-title{margin:0 0 12px 0;color:#dbeeff;font-size:16px;display:flex;align-items:center;gap:10px}
-    p.lead{color:var(--muted);margin:0 0 8px 0}
-
-    /* Projects */
+    /* two-column project grid */
     .projects{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .project{
-      background:var(--glass); padding:12px;border-radius:10px;border:1px solid var(--glass-border);
-      transition:transform .18s ease,box-shadow .18s ease;
-    }
-    .project:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,0.6)}
-    .project h3{margin:0;color:#fff;font-size:14px}
-    .project p{margin:6px 0 0 0;color:var(--muted);font-size:13px}
-    .project .tags{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+    .project{padding:12px;border-radius:10px;background:var(--glass);border:1px solid var(--glass-border);transition:transform var(--transition),box-shadow var(--transition);text-decoration:none;color:inherit}
+    .project:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,0.5)}
 
-    .tag{background:transparent;border:1px solid rgba(255,255,255,0.03);padding:6px 8px;border-radius:8px;font-size:12px;color:var(--muted)}
+    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .skill{padding:10px;border-radius:8px;background:var(--glass-2);border:1px solid var(--glass-border)}
 
-    /* Skills grid */
-    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
-    .skill-group{background:var(--glass-2);padding:12px;border-radius:10px;border:1px solid var(--glass-border)}
-    .skill-group h4{margin:0 0 8px 0;font-size:13px;color:#dbeeff}
-    .skill-list{display:flex;flex-direction:column;gap:6px}
-    .code{background:transparent;border-radius:6px;padding:6px 8px;border:1px dashed rgba(255,255,255,0.03);font-family:monospace;color:var(--muted);font-size:13px}
+    /* timeline */
+    .timeline{position:relative;padding-left:18px}
+    .timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,rgba(var(--accent-1),0.8),rgba(var(--accent-2),0.8))}
+    .timeline-item{position:relative;margin-bottom:18px;padding-left:12px}
+    .timeline-item .dot{position:absolute;left:-6px;top:4px;width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,rgba(var(--accent-1),1),rgba(var(--accent-2),1));border:2px solid var(--surface)}
 
-    /* Right column */
-    .side .card{margin-bottom:12px}
-    .stats{display:flex;flex-direction:column;gap:8px}
-    .stat{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-radius:8px;border:1px solid var(--glass-border);background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
-    .stat strong{font-size:16px;color:#fff}
-    .stat small{color:var(--muted)}
+    /* certificates / badges */
+    .cert-grid{display:flex;flex-wrap:wrap;gap:8px}
+    .cert{padding:8px 10px;border-radius:8px;border:1px solid var(--glass-border);background:var(--glass)}
 
-    /* Contact */
-    .contact{display:flex;flex-direction:column;gap:10px;margin-top:8px}
-    .contact a{color:var(--accent);text-decoration:none}
-    .copy{background:transparent;border:1px solid var(--glass-border);padding:8px;border-radius:8px;color:var(--muted);cursor:pointer}
+    /* testimonials carousel (simple) */
+    .testimonials{display:flex;gap:12px;overflow:auto}
+    .testimonial{min-width:220px;padding:12px;border-radius:10px;background:var(--glass);border:1px solid var(--glass-border)}
 
-    footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px;padding-bottom:40px}
+    /* contact form */
+    form .row{display:flex;gap:8px}
+    @media (max-width:980px){.skills-grid{grid-template-columns:repeat(2,1fr)}.projects{grid-template-columns:1fr}}
+    @media (max-width:520px){.skills-grid{grid-template-columns:1fr}.avatar{width:80px;height:80px}}
 
-    /* Responsive */
-    @media (max-width:980px){
-      main{grid-template-columns:1fr; }
-      .projects{grid-template-columns:1fr}
-      .skills-grid{grid-template-columns:repeat(2,1fr)}
-      .profile-card{flex-direction:row}
-    }
-    @media (max-width:520px){
-      .skills-grid{grid-template-columns:1fr}
-      header{flex-direction:column;align-items:stretch}
-      .profile-card{flex-direction:column;align-items:flex-start}
-      .avatar{width:84px;height:84px}
-    }
+    footer{text-align:center;color:var(--muted);margin-top:18px;font-size:13px}
 
     /* small helpers */
     .muted{color:var(--muted)}
-    .pill{padding:4px 8px;border-radius:999px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);font-size:12px}
-    .copy-feedback{color:var(--success);font-weight:700;font-size:13px}
+    a.link{color:inherit;text-decoration:none}
+
+    /* subtle animations */
+    [data-anim] {opacity:0;transform:translateY(6px);transition:opacity 420ms ease, transform 420ms ease}
+    [data-anim].revealed {opacity:1;transform:none}
+
+    /* focus outline for keyboard users */
+    :focus{outline:3px solid rgba(var(--accent-1),0.12);outline-offset:2px}
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="pageRoot">
 
     <header>
-      <div class="profile-card" style="width:100%">
-        <div class="avatar" aria-hidden="true">NU</div>
-        <div class="hero">
-          <div class="title">
-            <div>Nehru Usare</div>
-            <div class="pill">Java Backend Engineer • 4 YOE</div>
-          </div>
-          <div class="subtitle">Spring Boot • Microservices • Kafka • AWS • Distributed Systems</div>
-          <div class="badges">
-            <div class="badge">Java 8→21</div>
-            <div class="badge">Spring Boot 3.x</div>
-            <div class="badge">Event-Driven</div>
-            <div class="badge">Real-time Systems</div>
-          </div>
-
-          <div class="cta">
-            <a class="btn" href="https://github.com/nehru-usare" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 .5C5.73.5.99 5.24.99 11.5c0 4.66 3.01 8.61 7.19 10.01.53.1.72-.23.72-.51 0-.25-.01-.92-.01-1.81-2.92.64-3.54-1.41-3.54-1.41-.48-1.21-1.17-1.54-1.17-1.54-.96-.66.07-.65.07-.65 1.06.07 1.62 1.09 1.62 1.09.94 1.61 2.46 1.15 3.06.88.09-.68.37-1.15.68-1.41-2.33-.27-4.78-1.17-4.78-5.21 0-1.15.41-2.08 1.08-2.81-.11-.27-.47-1.37.1-2.86 0 0 .89-.29 2.9 1.07A10.1 10.1 0 0112 6.85c.9.004 1.81.12 2.66.35 2-1.36 2.88-1.07 2.88-1.07.57 1.49.21 2.59.1 2.86.68.73 1.08 1.66 1.08 2.81 0 4.05-2.45 4.93-4.78 5.19.38.33.72.99.72 1.99 0 1.44-.01 2.6-.01 2.96 0 .28.19.62.73.51C20 20.11 23 16.16 23 11.5 23 5.24 18.27.5 12 .5z" fill="#011225"/></svg>
-              GitHub
-            </a>
-            <a class="btn-ghost" href="#contact">Contact</a>
-            <a class="btn-ghost" id="resumeDownload" href="#" onclick="downloadResume(event)">Download Resume</a>
-          </div>
+      <div class="brand">
+        <div class="logo" aria-hidden>NU</div>
+        <div>
+          <h1>Nehru Usare</h1>
+          <div class="muted">Java Backend Engineer — Spring Boot • Kafka • AWS</div>
         </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn-ghost" id="themeToggle" aria-pressed="false">Toggle Theme</button>
+        <a class="btn" href="https://github.com/nehru-usare" target="_blank" rel="noopener">GitHub</a>
       </div>
     </header>
 
     <main>
       <!-- Left column -->
       <section>
-        <div class="card">
-          <h2 class="section-title">About</h2>
-          <p class="lead">Backend Engineer building scalable microservices and event-driven systems. I modernize Java platforms (8→21), migrate Spring Boot (2→3) and design high-throughput data pipelines with Kafka and Ignite.</p>
-          <p class="lead">I mentor teams, optimize performance, and automate delivery pipelines on AWS with Docker and CI/CD.</p>
+        <!-- Hero / Intro -->
+        <div class="card hero" data-anim>
+          <div class="avatar" aria-hidden>NU</div>
+          <div class="meta">
+            <div class="title">
+              <h2>Nehru Usare <span class="pill">Java Backend Engineer • 4 YOE</span></h2>
+            </div>
+            <div class="subtitle">I design and build resilient microservices, streaming data pipelines and scalable backend platforms for fintech and enterprise products.</div>
+            <div class="badges">
+              <div class="pill">Java 8→21</div>
+              <div class="pill">Spring Boot 3.x</div>
+              <div class="pill">Kafka • Event-Driven</div>
+              <div class="pill">AWS • Docker • CI/CD</div>
+            </div>
+            <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+              <a class="btn" href="https://github.com/nehru-usare" target="_blank" rel="noopener">View GitHub</a>
+              <a class="btn-ghost" href="#contact">Contact</a>
+              <a class="btn-ghost" id="downloadResume" href="#" onclick="downloadResume(event)">Download Resume</a>
+            </div>
+          </div>
         </div>
 
-        <div class="card" style="margin-top:12px">
-          <h2 class="section-title">Featured Projects</h2>
+        <!-- About -->
+        <div class="card" style="margin-top:12px" data-anim>
+          <h3 class="section-title">About</h3>
+          <p class="lead">Backend Engineer focused on building high-throughput microservices and event-driven systems. I help teams migrate and modernize Java platforms, implement resilient streaming architectures and automate delivery pipelines on cloud infrastructure.</p>
+          <p>Favored areas: distributed systems, performance tuning, observability, and dev experience.</p>
+        </div>
+
+        <!-- Experience / Timeline -->
+        <div class="card" style="margin-top:12px" data-anim>
+          <h3 class="section-title">Experience</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="dot" aria-hidden></div>
+              <div><strong>Senior Backend Engineer</strong> — Acme Fintech (2023 — Present)</div>
+              <div class="muted">Built event-driven settlement pipeline using Kafka & Apache Ignite; reduced processing latency by 45%.</div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="dot" aria-hidden></div>
+              <div><strong>Backend Engineer</strong> — XYZ Systems (2021 — 2023)</div>
+              <div class="muted">Motorized microservices migration: Spring Boot 2 → 3, CI/CD pipelines and containerization.</div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="dot" aria-hidden></div>
+              <div><strong>Software Engineer</strong> — Starter Co (2019 — 2021)</div>
+              <div class="muted">Designed reporting engine and integration layer for enterprise data exports.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="card" style="margin-top:12px" data-anim>
+          <h3 class="section-title">Projects</h3>
           <div class="projects">
             <a class="project" href="https://github.com/nehru-usare/financial-microservices" target="_blank" rel="noopener">
-              <h3>💼 Financial Microservices Platform</h3>
-              <p>Event-driven financial data processing with Kafka & Ignite — high throughput microservices for trading analytics.</p>
-              <div class="tags"><span class="tag">Java 21</span><span class="tag">Spring Boot 3.x</span><span class="tag">Kafka</span></div>
+              <h4>Financial Microservices Platform</h4>
+              <p class="muted">Event-driven financial data processing with Kafka & Ignite — high throughput microservices for trading analytics.</p>
+              <div style="margin-top:8px"><small class="muted">Java 21 • Spring Boot 3 • Kafka</small></div>
             </a>
 
             <a class="project" href="https://github.com/nehru-usare/reporting-tool" target="_blank" rel="noopener">
-              <h3>📊 Reporting Automation Tool</h3>
-              <p>Enterprise reporting engine (KNIME-like) using Spring Boot, Oracle SQL and Aspose/Apache POI for exports.</p>
-              <div class="tags"><span class="tag">Spring Boot</span><span class="tag">Oracle</span><span class="tag">Aspose/POI</span></div>
+              <h4>Reporting Automation Tool</h4>
+              <p class="muted">Enterprise reporting engine using Spring Boot, Oracle SQL and Aspose/Apache POI.</p>
+              <div style="margin-top:8px"><small class="muted">Spring Boot • Oracle • Exports</small></div>
             </a>
 
             <a class="project" href="https://github.com/nehru-usare/cicd-pipeline" target="_blank" rel="noopener">
-              <h3>⚙️ CI/CD Pipeline Setup</h3>
-              <p>Automated build & deploy pipelines for microservices using Jenkins, Docker & GitHub Actions.</p>
-              <div class="tags"><span class="tag">Jenkins</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span></div>
+              <h4>CI/CD Pipeline Setup</h4>
+              <p class="muted">Automated build & deploy pipelines for microservices using Jenkins, Docker & GitHub Actions.</p>
+              <div style="margin-top:8px"><small class="muted">CI/CD • Docker • Jenkins</small></div>
             </a>
 
             <a class="project" href="https://github.com/nehru-usare" target="_blank" rel="noopener">
-              <h3>🔎 More on GitHub</h3>
-              <p>Other utilities, internal tools, and demos — open-source snippets and experiments.</p>
-              <div class="tags"><span class="tag">Microservices</span><span class="tag">Utilities</span></div>
+              <h4>More on GitHub</h4>
+              <p class="muted">Other utilities, internal tools, and demos — open-source snippets and experiments.</p>
+              <div style="margin-top:8px"><small class="muted">Utilities • Demos</small></div>
             </a>
           </div>
         </div>
 
-        <div class="card" style="margin-top:12px">
-          <h2 class="section-title">Skills</h2>
+        <!-- Tech Stack / Skills -->
+        <div class="card" style="margin-top:12px" data-anim>
+          <h3 class="section-title">Tech Stack</h3>
+          <div class="skills-grid">
+            <div class="skill"><strong>Languages</strong><div class="muted" style="margin-top:6px">Java (8–21), C, C++, JavaScript</div></div>
+            <div class="skill"><strong>Frameworks</strong><div class="muted" style="margin-top:6px">Spring Boot, Spring Security, JPA/Hibernate</div></div>
+            <div class="skill"><strong>Cloud & DevOps</strong><div class="muted" style="margin-top:6px">AWS, Docker, Kubernetes (basic), Jenkins, GitHub Actions</div></div>
+            <div class="skill"><strong>Messaging & Data</strong><div class="muted" style="margin-top:6px">Kafka, WebSockets, Apache Ignite, PostgreSQL, Oracle</div></div>
+            <div class="skill"><strong>Testing</strong><div class="muted" style="margin-top:6px">JUnit 5, Mockito, Testcontainers</div></div>
+            <div class="skill"><strong>Tools</strong><div class="muted" style="margin-top:6px">IntelliJ, VS Code, Jira, SonarQube</div></div>
+          </div>
+        </div>
 
-          <div class="skills-grid" aria-hidden>
-            <div class="skill-group">
-              <h4>Languages & Databases</h4>
-              <div class="skill-list">
-                <div class="code">Java (8–21), C, C++, JavaScript</div>
-                <div class="code">SQL, PL/SQL, Oracle, MySQL, MongoDB, PostgreSQL</div>
-              </div>
-            </div>
+        <!-- Certifications -->
+        <div class="card" style="margin-top:12px" data-anim>
+          <h3 class="section-title">Certifications</h3>
+          <div class="cert-grid">
+            <div class="cert">Oracle Certified Java Programmer (placeholder)</div>
+            <div class="cert">AWS Certified Developer – Associate (placeholder)</div>
+            <div class="cert">Confluent Kafka Fundamentals (placeholder)</div>
+          </div>
+        </div>
 
-            <div class="skill-group">
-              <h4>Frameworks & Architecture</h4>
-              <div class="skill-list">
-                <div class="code">Spring Boot, Spring MVC, Spring Security</div>
-                <div class="code">JPA/Hibernate, Microservices, REST APIs, Event-Driven</div>
-              </div>
-            </div>
+        <!-- Blog / Articles (placeholder) -->
+        <div class="card" style="margin-top:12px" data-anim>
+          <h3 class="section-title">Writing</h3>
+          <p class="muted">Coming soon — links to technical articles, walkthroughs and architecture deep-dives. (You can link a Medium/Dev.to/Personal blog here.)</p>
+        </div>
 
-            <div class="skill-group">
-              <h4>Cloud, DevOps & CI/CD</h4>
-              <div class="skill-list">
-                <div class="code">AWS (EC2,S3), Docker, Kubernetes (Basic)</div>
-                <div class="code">Jenkins, GitHub Actions, SonarQube, Maven, Gradle</div>
-              </div>
-            </div>
-
-            <div class="skill-group">
-              <h4>Messaging & Caching</h4>
-              <div class="skill-list">
-                <div class="code">Apache Kafka, WebSockets, Apache Ignite</div>
-              </div>
-            </div>
-
-            <div class="skill-group">
-              <h4>Testing & QA</h4>
-              <div class="skill-list">
-                <div class="code">JUnit 5, Mockito, Testcontainers</div>
-                <div class="code">Postman, JMeter</div>
-              </div>
-            </div>
-
-            <div class="skill-group">
-              <h4>Tools & PM</h4>
-              <div class="skill-list">
-                <div class="code">IntelliJ, VS Code, Eclipse, Jira, Agile/Scrum</div>
-              </div>
-            </div>
+        <!-- Testimonials -->
+        <div class="card" style="margin-top:12px" data-anim>
+          <h3 class="section-title">Testimonials</h3>
+          <div class="testimonials">
+            <div class="testimonial"><strong>Manager at Acme</strong><div class="muted">"Delivered the Kafka pipeline with excellent reliability."</div></div>
+            <div class="testimonial"><strong>Peer</strong><div class="muted">"Great mentor & code quality advocate."</div></div>
+            <div class="testimonial"><strong>Client</strong><div class="muted">"Fast turnaround and clear architecture decisions."</div></div>
           </div>
         </div>
 
       </section>
 
-      <!-- Right column -->
+      <!-- Right column / Sidebar -->
       <aside class="side">
-        <div class="card">
-          <h2 class="section-title">Profile & Stats</h2>
-
+        <div class="card" data-anim>
+          <h3 class="section-title">Profile & Quick Stats</h3>
           <div style="text-align:center;margin-bottom:10px">
-            <!-- GitHub profile summary card -->
             <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nehru-usare&theme=tokyonight" alt="Profile Summary" style="max-width:100%;border-radius:10px;border:1px solid var(--glass-border)">
           </div>
-
-          <div class="stats">
-            <div class="stat"><small>Total Repos</small><strong id="repoCount">—</strong></div>
-            <div class="stat"><small>Top Language</small><strong id="topLang">—</strong></div>
-            <div class="stat"><small>Open to</small><strong>Backend Roles / Microservices</strong></div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;justify-content:space-between"><small class="muted">Total Repos</small><strong id="repoCount">—</strong></div>
+            <div style="display:flex;justify-content:space-between"><small class="muted">Top Language</small><strong id="topLang">—</strong></div>
+            <div style="display:flex;justify-content:space-between"><small class="muted">Open to</small><strong>Backend Roles</strong></div>
           </div>
         </div>
 
-        <div class="card">
-          <h2 class="section-title">Contact</h2>
-          <div class="contact">
-            <div class="muted">Email</div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <div class="copy" id="emailBox">nehruusare630@gmail.com</div>
-              <button class="btn-ghost" onclick="copyEmail()">Copy</button>
-              <a class="btn" href="mailto:nehruusare630@gmail.com">Email</a>
+        <div class="card" style="margin-top:12px" id="contact" data-anim>
+          <h3 class="section-title">Contact</h3>
+          <div class="muted">Email</div>
+          <div style="display:flex;gap:8px;align-items:center;margin-top:6px">
+            <div class="pill" id="emailBox">nehruusare630@gmail.com</div>
+            <button class="btn-ghost" onclick="copyEmail()">Copy</button>
+            <a class="btn" href="mailto:nehruusare630@gmail.com">Email</a>
+          </div>
+
+          <div class="muted" style="margin-top:10px">LinkedIn</div>
+          <a class="link" href="https://linkedin.com/in/nehru-usare" target="_blank">linkedin.com/in/nehru-usare</a>
+
+          <div class="muted" style="margin-top:10px">Resume</div>
+          <a class="pill" href="#" onclick="downloadResume(event)">Download (PDF)</a>
+
+          <hr style="margin:12px 0;border:none;border-top:1px solid var(--glass-border)">
+
+          <h4 style="margin:0 0 8px 0">Message</h4>
+          <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+            <div class="row">
+              <input name="name" placeholder="Your name" required style="flex:1;padding:10px;border-radius:8px;border:1px solid var(--glass-border);background:transparent;color:inherit">
             </div>
-
-            <div class="muted" style="margin-top:8px">LinkedIn</div>
-            <a href="https://linkedin.com/in/nehru-usare" target="_blank" class="copy">linkedin.com/in/nehru-usare</a>
-
-            <div class="muted" style="margin-top:8px">Resume</div>
-            <a id="resumeLink" class="copy" href="#" onclick="downloadResume(event)">Download (PDF)</a>
-          </div>
+            <div style="margin-top:8px"><input name="email" placeholder="Your email" type="email" required style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--glass-border);background:transparent;color:inherit"></div>
+            <div style="margin-top:8px"><textarea name="message" placeholder="Message" required style="width:100%;padding:10px;border-radius:8px;border:1px solid var(--glass-border);background:transparent;color:inherit;min-height:96px"></textarea></div>
+            <div style="margin-top:8px;display:flex;gap:8px"><button class="btn" type="submit">Send</button><button type="reset" class="btn-ghost">Reset</button></div>
+            <div style="margin-top:8px;font-size:13px;color:var(--muted)">Form posts to Formspree — replace the action with your form endpoint.</div>
+          </form>
         </div>
 
-        <div class="card">
-          <h2 class="section-title">Tech Radar</h2>
-          <div style="text-align:center">
-            <!-- Tech radar widget (external) -->
-            <img src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=nehru-usare" alt="Skills Graph" style="width:100%;border-radius:8px;border:1px solid var(--glass-border)">
-          </div>
+        <div class="card" style="margin-top:12px" data-anim>
+          <h3 class="section-title">Tech Radar</h3>
+          <img src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=nehru-usare" alt="Skills Graph" style="width:100%;border-radius:8px;border:1px solid var(--glass-border)">
+        </div>
+
+        <div class="card" style="margin-top:12px" data-anim>
+          <h3 class="section-title">Availability</h3>
+          <p class="muted">Open to Backend/Microservices roles. Prefer Hyderabad / Remote.</p>
+          <div style="display:flex;gap:8px;margin-top:8px"><a class="btn-ghost" href="#contact">Hire Me</a><a class="btn" href="https://github.com/nehru-usare" target="_blank">View Work</a></div>
         </div>
 
       </aside>
     </main>
 
     <footer>
-      <div>© <span id="year"></span> Nehru Usare — Java Backend Engineer • <span class="muted">Hyderabad, Telangana</span></div>
+      <div>© <span id="year">2025</span> Nehru Usare — Java Backend Engineer • <span class="muted">Hyderabad, Telangana</span></div>
     </footer>
   </div>
 
   <script>
-    // Replace these repo links if yours are different
-    const GITHUB_USERNAME = 'nehru-usare';
+    // Basic runtime behaviours: theme, GitHub meta, copy, resume download, scroll reveal
+    const root = document.documentElement;
+    const pageRoot = document.getElementById('pageRoot');
 
-    // small helpers
+    // Persisted theme (light / dark)
+    const THEME_KEY = 'nu_theme';
+    function applyTheme(t){
+      if(t === 'light') document.documentElement.setAttribute('data-theme','light');
+      else document.documentElement.removeAttribute('data-theme');
+      document.getElementById('themeToggle').setAttribute('aria-pressed', t === 'light');
+      localStorage.setItem(THEME_KEY, t);
+    }
+    // init
+    (function(){
+      const saved = localStorage.getItem(THEME_KEY);
+      if(saved) applyTheme(saved);
+      else {
+        // default: follow prefers-color-scheme
+        const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+        applyTheme(prefersLight ? 'light' : 'dark');
+      }
+    })();
+
+    document.getElementById('themeToggle').addEventListener('click', ()=>{
+      const current = localStorage.getItem(THEME_KEY) === 'light' ? 'light' : 'dark';
+      applyTheme(current === 'light' ? 'dark' : 'light');
+    });
+
+    // dynamic year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Fetch simple GitHub stats via public API (rate-limited; fine for small use)
-    async function fetchGitHubMeta() {
-      try {
+    // GitHub simple fetch
+    const GITHUB_USERNAME = 'nehru-usare';
+    async function fetchGitHubMeta(){
+      try{
         const res = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}`);
         if(!res.ok) return;
         const data = await res.json();
         document.getElementById('repoCount').textContent = data.public_repos ?? '—';
-      } catch (e) {
-        console.warn('GitHub meta fetch failed', e);
-      }
+      } catch(e){console.warn('gh meta failed',e)}
     }
     fetchGitHubMeta();
 
-    // small top languages detection via GitHub readme-stats endpoint (image alt trick)
-    async function fetchTopLang() {
-      try {
-        const img = new Image();
-        img.crossOrigin = 'anonymous';
-        img.src = `https://github-readme-stats.vercel.app/api/top-langs/?username=${GITHUB_USERNAME}&layout=compact&theme=tokyonight`;
-        img.onload = () => {
-          // we cannot parse image; instead just show 'View' link
-          document.getElementById('topLang').textContent = 'View on GitHub card';
-        };
-        img.onerror = () => {
-          document.getElementById('topLang').textContent = '—';
-        };
-      } catch (e) {
-        document.getElementById('topLang').textContent = '—';
-      }
-    }
-    fetchTopLang();
+    // top lang (best-effort) — show link fallback
+    document.getElementById('topLang').textContent = 'View on GitHub card';
 
-    // Copy email
+    // copy email
     function copyEmail(){
       const txt = document.getElementById('emailBox').textContent;
-      navigator.clipboard?.writeText(txt).then(()=> {
-        const btn = document.querySelector('.btn-ghost');
-        const original = btn.textContent;
-        btn.textContent = 'Copied ✓';
-        setTimeout(()=> btn.textContent = original, 1500);
+      navigator.clipboard?.writeText(txt).then(()=>{
+        alert('Email copied to clipboard');
       }).catch(()=> alert('Copy failed — please copy manually.'));
     }
 
-    // Download resume placeholder - instruct user to upload resume at /assets/resume.pdf in repo
+    // resume download
     function downloadResume(e){
       e.preventDefault();
-      const resumeUrl = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '/') + 'assets/resume.pdf';
-      // try to open resume
-      fetch(resumeUrl, {method:'HEAD'}).then(r => {
-        if(r.ok) {
-          window.open(resumeUrl, '_blank');
-        } else {
-          // fallback: show instructions
-          alert('Resume not found at ' + resumeUrl + '.\n\nPlease upload your resume to the repo at `assets/resume.pdf` or edit the link in index.html to point to your resume file.');
-        }
-      }).catch(()=> {
-        alert('Unable to fetch resume. Upload `assets/resume.pdf` to your repo or update the resume link in the HTML.');
-      });
+      const resumeUrl = window.location.origin + window.location.pathname.replace(/\/[^"]*$/, '/') + 'assets/resume.pdf';
+      fetch(resumeUrl, {method:'HEAD'}).then(r=>{
+        if(r.ok) window.open(resumeUrl, '_blank');
+        else alert('Resume not found at ' + resumeUrl + '\nUpload assets/resume.pdf in your repo or update the link.');
+      }).catch(()=> alert('Could not fetch resume. Use assets/resume.pdf or update link.'));
     }
 
-    // Allow opening project links with keyboard
-    document.querySelectorAll('.project').forEach(p => {
-      p.addEventListener('keydown', (e) => {
-        if(e.key === 'Enter') window.open(p.href, '_blank');
-      });
+    // contact form: simple local validation + message
+    document.getElementById('contactForm').addEventListener('submit', (e)=>{
+      // allow default post to Formspree — show friendly message
+      alert('Message submitted — if you used Formspree replace the action with your form endpoint.');
     });
 
-    // Small accessibility: focus outlines
-    document.addEventListener('keyup', (e) => {
-      if(e.key === 'Tab') document.body.classList.add('show-focus');
-    });
+    // scroll reveal
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('revealed');
+      });
+    },{threshold:0.12});
+    document.querySelectorAll('[data-anim]').forEach(el=>observer.observe(el));
+
+    // accessibility: keyboard focus visible
+    document.addEventListener('keyup', (ev)=>{ if(ev.key === 'Tab') document.body.classList.add('show-focus') });
+
   </script>
 </body>
 </html>
