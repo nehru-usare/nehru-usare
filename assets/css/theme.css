@@ -1,30 +1,168 @@
-// assets/js/theme.js
+:root {
+  /* Core palette */
+  --bg-primary: #0c0f17;
+  --bg-secondary: #131823;
+  --bg-card: #1b2231;
+  --text-primary: #e8edf5;
+  --text-secondary: #a0aec0;
+  --accent: #00bfa6; /* teal */
+  --accent-2: #f0c674; /* gold highlight */
+  --border: rgba(255, 255, 255, 0.08);
+  --radius: 12px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
 
-// Theme toggle button
-const themeToggle = document.getElementById("theme-toggle");
+/* Light theme toggle */
+[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: #f2f4f8;
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+  --accent: #00897b;
+  --accent-2: #d1a200;
+  --border: rgba(0, 0, 0, 0.1);
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
 
-// Load saved preference
-const savedTheme = localStorage.getItem("theme") || "dark";
-document.documentElement.setAttribute("data-theme", savedTheme);
+/* Page base */
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.3s, color 0.3s;
+}
 
-// Update icon based on theme
-const updateIcon = (theme) => {
-  if (theme === "light") {
-    themeToggle.textContent = "🌞";
-  } else {
-    themeToggle.textContent = "🌙";
+/* Header */
+.site-header {
+  text-align: center;
+  padding: 40px 16px;
+  background: linear-gradient(180deg, var(--bg-secondary), transparent);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 12px rgba(0, 191, 166, 0.3);
+}
+
+.site-header h1 {
+  margin: 12px 0 4px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.site-header p {
+  color: var(--text-secondary);
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.theme-toggle {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #000;
+  box-shadow: var(--shadow);
+}
+
+/* Section base */
+.section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons */
+.btn {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #0d1117;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 18px rgba(0, 191, 166, 0.25);
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 12px;
   }
-};
-updateIcon(savedTheme);
-
-// Toggle theme on click
-themeToggle.addEventListener("click", () => {
-  const currentTheme = document.documentElement.getAttribute("data-theme");
-  const newTheme = currentTheme === "light" ? "dark" : "light";
-  document.documentElement.setAttribute("data-theme", newTheme);
-  localStorage.setItem("theme", newTheme);
-  updateIcon(newTheme);
-
-  // Add smooth transition
-  document.body.style.transition = "background 0.5s, color 0.5s";
-});
+  .section {
+    padding: 40px 16px;
+  }
+}
