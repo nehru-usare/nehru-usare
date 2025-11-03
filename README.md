@@ -1,4 +1,4 @@
-<!-- 🌌 Pro GitHub Profile Dashboard v2 — Nehru Usare -->
+<!-- 🌌 Pro GitHub Profile Dashboard v3 — Nehru Usare -->
 <div align="center">
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=3AB0FF&size=26&center=true&vCenter=true&width=800&lines=👋+Hi,+I'm+Nehru+Usare;Java+Backend+Engineer;Spring+Boot+%7C+Microservices+%7C+Kafka+%7C+AWS;Building+Scalable+Distributed+Systems)](https://git.io/typing-svg)
@@ -96,29 +96,46 @@
 
 ---
 
-## 💼 **Professional Experience**
+## 🚧 **Currently Working On**
+- ⚙️ Upgrading **Spring Boot 3.x** services with **Kafka** and **Apache Ignite** for event-driven processing  
+- ☁️ Building containerized microservices on **AWS ECS + Docker**  
+- 🧩 Exploring **Kubernetes Helm** and **GitHub Actions** for CI/CD automation  
+- 📈 Learning **Reactive Programming (WebFlux)** for non-blocking API design  
 
+---
+
+## 🌟 **Featured Projects**
+
+| Project | Description | Tech Stack |
+|----------|--------------|-------------|
+| [💼 Financial Microservices Platform](https://github.com/nehru-usare/financial-microservices) | Event-driven financial data processing system | Java 21, Spring Boot 3.x, Kafka, Ignite |
+| [📊 Reporting Automation Tool](https://github.com/nehru-usare/reporting-tool) | Enterprise-grade reporting engine like KNIME | Spring Boot, Oracle SQL, Aspose/POI |
+| [⚙️ CI/CD Pipeline Setup](https://github.com/nehru-usare/cicd-pipeline) | Automated build & deploy workflow | Jenkins, Docker, AWS, GitHub Actions |
+
+---
+
+## 🧩 **Tech Radar**
+*(Auto-generated visual overview of skills)*  
+![Skills Graph](https://cr-skills-chart-widget.azurewebsites.net/api/api?username=nehru-usare)
+
+---
+
+## 💼 **Professional Experience**
 <details>
   <summary>🔹 <b>Proounce Solutions Pvt Ltd — Java Backend Developer (Lead)</b></summary>
 
-- Led backend modernization from **Java 8 → 21** and **Spring Boot 2.x → 3.x**.  
-- Built **microservices** for financial analytics using **Kafka**, **Ignite**, and **WebSockets**.  
-- Architected and deployed real-time systems on **AWS** with **Docker**, **Jenkins**, and **SonarQube**.  
-- Mentored a **5–6 member backend team**, enforcing code quality and delivery standards.  
-- Improved reporting workflow efficiency by **60%** through automation (Aspose/POI).  
-- Delivered secure, compliant solutions for a **US Federal Client (Finance domain)**.  
+- Led backend modernization from **Java 8 → 21** and **Spring Boot 2.x → 3.x**  
+- Built **microservices** for financial analytics using **Kafka**, **Ignite**, and **WebSockets**  
+- Architected and deployed real-time systems on **AWS** with **Docker**, **Jenkins**, and **SonarQube**  
+- Mentored a **5–6 member backend team**, enforcing code quality and delivery standards  
+- Improved reporting workflow efficiency by **60%** through automation (Aspose/POI)  
+- Delivered secure, compliant solutions for a **US Federal Client (Finance domain)**  
 
 </details>
 
 ---
 
-## ⏱️ **Weekly Development Breakdown (WakaTime)**
-![Wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=nehruusare&theme=tokyonight&hide_border=true)
-
----
-
 ## 📊 **GitHub Analytics**
-
 <p align="center">
   <img width="48%" src="https://github-readme-stats.vercel.app/api?username=nehru-usare&show_icons=true&theme=tokyonight&hide_border=true" />
   <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=nehru-usare&theme=tokyonight&hide_border=true" />
@@ -136,6 +153,15 @@
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=nehru-usare&theme=tokyonight&no-bg=true&margin-w=10" />
 </p>
+
+<details>
+  <summary>🎯 <b>Fun Facts & Highlights</b></summary>
+
+  - 💡 Mentored 5+ backend developers in Spring Boot 3.x  
+  - ⚙️ Automated reporting workflows for enterprise clients  
+  - ☁️ Built scalable cloud-native systems on AWS  
+  - 🧠 Contributor to open-source backend projects  
+</details>
 
 ---
 
