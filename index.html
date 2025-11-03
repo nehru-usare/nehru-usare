@@ -393,7 +393,7 @@
     // resume download
     function downloadResume(e){
       e.preventDefault();
-      const resumeUrl = window.location.origin + window.location.pathname.replace(/\/[^"]*$/, '/') + 'assets/resume.pdf';
+      const resumeUrl = 'https://nehru-usare.github.io/nehru-usare/assets/resume.pdf';
       fetch(resumeUrl, {method:'HEAD'}).then(r=>{
         if(r.ok) window.open(resumeUrl, '_blank');
         else alert('Resume not found at ' + resumeUrl + '\nUpload assets/resume.pdf in your repo or update the link.');
