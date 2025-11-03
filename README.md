@@ -112,11 +112,6 @@
 
 ---
 
-## 🎧 **Now Playing on Spotify**
-[![Spotify](https://novatorem.vercel.app/api/spotify)](https://open.spotify.com/user/spotify)
-
----
-
 ## ⏱️ **Weekly Development Breakdown (WakaTime)**
 ![Wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=nehruusare&theme=tokyonight&hide_border=true)
 
