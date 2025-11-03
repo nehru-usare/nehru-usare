@@ -1,0 +1,41 @@
+name: 🐍 Profile Auto Updates (Snake + Stats)
+
+on:
+  schedule:
+    # Runs once every day at 11:00 PM IST (adjust if needed)
+    - cron: "30 17 * * *"
+  workflow_dispatch: # Allows manual run from Actions tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout your GitHub profile repository
+      - name: 🧩 Checkout
+        uses: actions/checkout@v3
+
+      # Generate Snake animation from your contributions
+      - name: 🐍 Generate Contribution Snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: nehru-usare
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Commit the generated snake files to the output branch
+      - name: 🪄 Push Snake SVG to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Optional: Refresh README to update Spotify / WakaTime widgets
+      - name: 🔄 Refresh README Cache
+        run: |
+          echo "Triggering cache refresh..."
+          curl -s -X PURGE https://github-readme-stats.vercel.app/api?username=nehru-usare > /dev/null
