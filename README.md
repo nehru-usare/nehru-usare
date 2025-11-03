@@ -1,24 +1,24 @@
-<!-- 🌌 Pro-Level GitHub Profile Dashboard for Nehru Usare -->
+<!-- 🌌 Pro GitHub Profile Dashboard v2 — Nehru Usare -->
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=58A6FF&size=26&center=true&vCenter=true&width=800&lines=👋+Hi,+I'm+Nehru+Usare;Java+Backend+Engineer;Spring+Boot+%7C+Microservices+%7C+Kafka+%7C+AWS;Building+Scalable+Distributed+Systems)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=3AB0FF&size=26&center=true&vCenter=true&width=800&lines=👋+Hi,+I'm+Nehru+Usare;Java+Backend+Engineer;Spring+Boot+%7C+Microservices+%7C+Kafka+%7C+AWS;Building+Scalable+Distributed+Systems)](https://git.io/typing-svg)
 
 ---
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/nehru-usare)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nehru-usare)
 [![Email](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nehruusare630@gmail.com)
-![Profile Views](https://komarev.com/ghpvc/?username=nehru-usare&color=blueviolet&style=for-the-badge)
+![Profile Views](https://komarev.com/ghpvc/?username=nehru-usare&color=3AB0FF&style=for-the-badge)
 
 </div>
 
 ---
 
 ## 🚀 **About Me**
-💻 Backend Engineer with **4 years of experience** building scalable microservices and distributed systems.  
-⚙️ Specialized in **Spring Boot (2→3)**, **Java (8→21)**, **Kafka**, and **AWS**-based architectures.  
-☁️ Passionate about **system design**, **performance optimization**, and **clean, maintainable code**.  
-🧠 Always learning, building, and automating — “Clean code is my craft.”  
+💻 Backend Engineer with **4 years of experience** designing scalable microservices and distributed systems.  
+⚙️ Expert in **Spring Boot (2→3)**, **Java (8→21)**, **Kafka**, and **AWS** for real-time, high-performance applications.  
+☁️ Passionate about **system design**, **cloud-native deployment**, and **clean architecture principles**.  
+🧠 Lifelong learner focused on simplicity, performance, and automation.
 
 ---
 
@@ -26,50 +26,99 @@
 
 <div align="center">
 
-### 💻 <span style="color:#FFD700;">Languages & Databases</span>
+### 💻 **Languages & Databases**
 <p align="center">
   <img src="https://skillicons.dev/icons?i=java,c,cpp,js,postgresql,mysql,mongodb,oracle" />
 </p>
-<code>Java (8–21)</code> • <code>C</code> • <code>C++</code> • <code>JavaScript</code> • <code>SQL</code> • <code>PL/SQL</code> • <code>Oracle (Primary)</code> • <code>MySQL</code> • <code>MongoDB</code>
+
+![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-003B57?logo=databricks&logoColor=white)
+![PL/SQL](https://img.shields.io/badge/PL%2FSQL-4479A1?logo=oracle&logoColor=white)
+![Oracle](https://img.shields.io/badge/Oracle-F80000?logo=oracle&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-00758F?logo=mysql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white)
 
 ---
 
-### 🧩 <span style="color:#00CED1;">Frameworks & Architecture</span>
+### 🧩 **Frameworks & Architecture**
 <p align="center">
   <img src="https://skillicons.dev/icons?i=spring,hibernate" />
 </p>
-<code>Spring Boot</code> • <code>Spring MVC</code> • <code>Spring Security</code> • <code>JPA / Hibernate</code> • <code>Microservices</code> • <code>REST API Design</code> • <code>Event-Driven Architecture</code>
+
+![Spring Boot](https://img.shields.io/badge/SpringBoot-6DB33F?logo=springboot&logoColor=white)
+![Spring Security](https://img.shields.io/badge/SpringSecurity-6DB33F?logo=springsecurity&logoColor=white)
+![Hibernate](https://img.shields.io/badge/Hibernate-59666C?logo=hibernate&logoColor=white)
+![Microservices](https://img.shields.io/badge/Microservices-4285F4?logo=java&logoColor=white)
+![REST APIs](https://img.shields.io/badge/REST%20API-02569B?logo=swagger&logoColor=white)
 
 ---
 
-### ☁️ <span style="color:#32CD32;">Cloud, DevOps & CI/CD</span>
+### ☁️ **Cloud, DevOps & CI/CD**
 <p align="center">
   <img src="https://skillicons.dev/icons?i=aws,docker,kubernetes,jenkins,githubactions,maven,gradle,sonarqube" />
 </p>
-<code>AWS (EC2, S3)</code> • <code>Docker</code> • <code>Kubernetes (Basic)</code> • <code>Jenkins</code> • <code>GitHub Actions</code> • <code>SonarQube</code> • <code>Maven</code> • <code>Gradle</code>
+
+![AWS](https://img.shields.io/badge/AWS-232F3E?logo=amazonaws&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white)
+![Jenkins](https://img.shields.io/badge/Jenkins-D33833?logo=jenkins&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=githubactions&logoColor=white)
+![SonarQube](https://img.shields.io/badge/SonarQube-4E9BCD?logo=sonarqube&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-C71A36?logo=apachemaven&logoColor=white)
+![Gradle](https://img.shields.io/badge/Gradle-02303A?logo=gradle&logoColor=white)
 
 ---
 
-### 🔁 <span style="color:#FF69B4;">Messaging & Caching</span>
-<code>Apache Kafka</code> • <code>WebSockets</code> • <code>Apache Ignite</code>
+### 🔁 **Messaging & Caching**
+![Kafka](https://img.shields.io/badge/Kafka-231F20?logo=apachekafka&logoColor=white)
+![WebSockets](https://img.shields.io/badge/WebSockets-2C2C32?logo=websocket&logoColor=white)
+![Apache Ignite](https://img.shields.io/badge/Apache%20Ignite-FF6600?logo=apache&logoColor=white)
 
 ---
 
-### 🧪 <span style="color:#FFA500;">Testing & Quality Assurance</span>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=postman" />
-</p>
-<code>JUnit 5</code> • <code>Mockito</code> • <code>Testcontainers</code> • <code>Postman</code> • <code>JMeter</code>
+### 🧪 **Testing & Quality Assurance**
+![JUnit 5](https://img.shields.io/badge/JUnit%205-25A162?logo=junit5&logoColor=white)
+![Mockito](https://img.shields.io/badge/Mockito-239120?logo=java&logoColor=white)
+![Testcontainers](https://img.shields.io/badge/Testcontainers-0769AD?logo=docker&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white)
+![JMeter](https://img.shields.io/badge/JMeter-D22128?logo=apachejmeter&logoColor=white)
 
 ---
 
-### ⚙️ <span style="color:#00BFFF;">Tools & Project Management</span>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=intellij,vscode,eclipse" />
-</p>
-<code>IntelliJ IDEA</code> • <code>VS Code</code> • <code>Eclipse</code> • <code>Jira</code> • <code>Agile / Scrum</code>
+### ⚙️ **Tools & Project Management**
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ-000000?logo=intellijidea&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?logo=visualstudiocode&logoColor=white)
+![Eclipse](https://img.shields.io/badge/Eclipse-2C2255?logo=eclipseide&logoColor=white)
+![Jira](https://img.shields.io/badge/Jira-0052CC?logo=jira&logoColor=white)
+![Agile](https://img.shields.io/badge/Agile-FF4088?logo=azuredevops&logoColor=white)
 
 </div>
+
+---
+
+## 💼 **Professional Experience**
+
+<details>
+  <summary>🔹 <b>Proounce Solutions Pvt Ltd — Java Backend Developer (Lead)</b></summary>
+
+- Led backend modernization from **Java 8 → 21** and **Spring Boot 2.x → 3.x**.  
+- Built **microservices** for financial analytics using **Kafka**, **Ignite**, and **WebSockets**.  
+- Architected and deployed real-time systems on **AWS** with **Docker**, **Jenkins**, and **SonarQube**.  
+- Mentored a **5–6 member backend team**, enforcing code quality and delivery standards.  
+- Improved reporting workflow efficiency by **60%** through automation (Aspose/POI).  
+- Delivered secure, compliant solutions for a **US Federal Client (Finance domain)**.  
+
+</details>
+
+---
+
+## 🎧 **Now Playing on Spotify**
+[![Spotify](https://novatorem.vercel.app/api/spotify)](https://open.spotify.com/user/spotify)
+
+---
+
+## ⏱️ **Weekly Development Breakdown (WakaTime)**
+![Wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=nehruusare&theme=tokyonight&hide_border=true)
 
 ---
 
@@ -95,16 +144,6 @@
 
 ---
 
-## 🌟 **Featured Projects**
-
-| Project | Description | Tech Stack |
-|----------|--------------|-------------|
-| [💼 Financial Microservices Platform](#) | Event-driven financial data processing with Kafka & Ignite | Java 21, Spring Boot 3.x, Kafka, Ignite |
-| [📊 Reporting Automation Tool](#) | Internal enterprise reporting engine (like KNIME) | Spring Boot, Oracle SQL, Aspose/POI |
-| [⚙️ CI/CD Pipeline Setup](#) | Automated build & deploy for backend microservices | Jenkins, Docker, AWS |
-
----
-
 ## 🐍 **GitHub Contribution Snake**
 ![Snake animation](https://github.com/nehru-usare/nehru-usare/blob/output/github-contribution-grid-snake-dark.svg)
 
@@ -112,14 +151,6 @@
 
 ## 💬 **Developer Quote**
 ![Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
-
----
-
-## 🧭 **Quick Stats**
-- 🔹 4+ years in Java backend development  
-- 🔹 Skilled in microservices, event-driven systems, and cloud deployment  
-- 🔹 Experienced in team leadership & mentoring  
-- 🔹 Focused on scalable, secure, and high-performance architectures  
 
 ---
 
@@ -133,6 +164,6 @@
 
 ---
 
-⭐️ *"Building scalable systems, one microservice at a time."*
+⭐ *"Designing backends that scale — clean, efficient, and resilient."*
 
 </div>
