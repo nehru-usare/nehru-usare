@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nehru Usare — Java Backend Engineer</title>
+  <meta name="description" content="Nehru Usare — Java Backend Engineer | Spring Boot | Microservices | Kafka | AWS. Portfolio, projects, and contact." />
+  <meta name="author" content="Nehru Usare" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="https://raw.githubusercontent.com/nehru-usare/nehru-usare/main/favicon.png" type="image/png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#0f1724;
+      --muted:#9aa7bf;
+      --accent:#3ab0ff; /* blue accent */
+      --accent-2:#58a6ff;
+      --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.02);
+      --glass-border: rgba(255,255,255,0.04);
+      --success: #47A248;
+      --max-width: 1100px;
+      --radius: 12px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(58,176,255,0.05), transparent),
+                  radial-gradient(1000px 400px at 90% 90%, rgba(40,200,150,0.02), transparent),
+                  var(--bg);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:32px 20px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+    }
+
+    header{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      margin-bottom:20px;
+    }
+
+    .profile-card{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid var(--glass-border);
+      padding:18px;
+      border-radius:14px;
+      box-shadow: 0 6px 30px rgba(5,10,20,0.6);
+    }
+
+    .avatar{
+      width:96px; height:96px; border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:flex;align-items:center;justify-content:center;
+      font-weight:800;font-size:28px;color:#051122;
+    }
+
+    .hero{
+      flex:1;
+      min-width:0;
+    }
+    .title{
+      font-size:20px;font-weight:700;color:#fff;margin:0 0 6px 0;
+      display:flex;gap:10px;align-items:center;
+    }
+    .subtitle{color:var(--muted);margin:0 0 8px 0;font-weight:500}
+    .badges{display:flex;gap:8px;flex-wrap:wrap}
+
+    .badge{
+      background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.015));
+      border:1px solid var(--glass-border);
+      padding:6px 10px;font-size:13px;border-radius:999px;color:var(--accent);
+      display:inline-flex;align-items:center;gap:8px;
+    }
+    .cta{
+      margin-top:10px;display:flex;gap:10px;flex-wrap:wrap;
+    }
+    .btn{
+      background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:#011225;padding:9px 14px;border-radius:10px;font-weight:700;border:none;
+      cursor:pointer;text-decoration:none;display:inline-flex;gap:8px;align-items:center;
+      box-shadow:0 6px 18px rgba(58,176,255,0.12);
+    }
+    .btn-ghost{
+      background:transparent;border:1px solid var(--glass-border);color:var(--muted);
+      padding:8px 12px;border-radius:10px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+    }
+
+    main{
+      margin-top:22px; display:grid; grid-template-columns: 1fr 360px; gap:22px;
+    }
+
+    /* Left column */
+    .card{
+      background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.01));
+      border-radius:var(--radius); padding:18px; border:1px solid var(--glass-border);
+      box-shadow: 0 8px 30px rgba(3,6,12,0.6);
+    }
+
+    h2.section-title{margin:0 0 12px 0;color:#dbeeff;font-size:16px;display:flex;align-items:center;gap:10px}
+    p.lead{color:var(--muted);margin:0 0 8px 0}
+
+    /* Projects */
+    .projects{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .project{
+      background:var(--glass); padding:12px;border-radius:10px;border:1px solid var(--glass-border);
+      transition:transform .18s ease,box-shadow .18s ease;
+    }
+    .project:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,0.6)}
+    .project h3{margin:0;color:#fff;font-size:14px}
+    .project p{margin:6px 0 0 0;color:var(--muted);font-size:13px}
+    .project .tags{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+
+    .tag{background:transparent;border:1px solid rgba(255,255,255,0.03);padding:6px 8px;border-radius:8px;font-size:12px;color:var(--muted)}
+
+    /* Skills grid */
+    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+    .skill-group{background:var(--glass-2);padding:12px;border-radius:10px;border:1px solid var(--glass-border)}
+    .skill-group h4{margin:0 0 8px 0;font-size:13px;color:#dbeeff}
+    .skill-list{display:flex;flex-direction:column;gap:6px}
+    .code{background:transparent;border-radius:6px;padding:6px 8px;border:1px dashed rgba(255,255,255,0.03);font-family:monospace;color:var(--muted);font-size:13px}
+
+    /* Right column */
+    .side .card{margin-bottom:12px}
+    .stats{display:flex;flex-direction:column;gap:8px}
+    .stat{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-radius:8px;border:1px solid var(--glass-border);background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent)}
+    .stat strong{font-size:16px;color:#fff}
+    .stat small{color:var(--muted)}
+
+    /* Contact */
+    .contact{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+    .contact a{color:var(--accent);text-decoration:none}
+    .copy{background:transparent;border:1px solid var(--glass-border);padding:8px;border-radius:8px;color:var(--muted);cursor:pointer}
+
+    footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px;padding-bottom:40px}
+
+    /* Responsive */
+    @media (max-width:980px){
+      main{grid-template-columns:1fr; }
+      .projects{grid-template-columns:1fr}
+      .skills-grid{grid-template-columns:repeat(2,1fr)}
+      .profile-card{flex-direction:row}
+    }
+    @media (max-width:520px){
+      .skills-grid{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:stretch}
+      .profile-card{flex-direction:column;align-items:flex-start}
+      .avatar{width:84px;height:84px}
+    }
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .pill{padding:4px 8px;border-radius:999px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);font-size:12px}
+    .copy-feedback{color:var(--success);font-weight:700;font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="profile-card" style="width:100%">
+        <div class="avatar" aria-hidden="true">NU</div>
+        <div class="hero">
+          <div class="title">
+            <div>Nehru Usare</div>
+            <div class="pill">Java Backend Engineer • 4 YOE</div>
+          </div>
+          <div class="subtitle">Spring Boot • Microservices • Kafka • AWS • Distributed Systems</div>
+          <div class="badges">
+            <div class="badge">Java 8→21</div>
+            <div class="badge">Spring Boot 3.x</div>
+            <div class="badge">Event-Driven</div>
+            <div class="badge">Real-time Systems</div>
+          </div>
+
+          <div class="cta">
+            <a class="btn" href="https://github.com/nehru-usare" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M12 .5C5.73.5.99 5.24.99 11.5c0 4.66 3.01 8.61 7.19 10.01.53.1.72-.23.72-.51 0-.25-.01-.92-.01-1.81-2.92.64-3.54-1.41-3.54-1.41-.48-1.21-1.17-1.54-1.17-1.54-.96-.66.07-.65.07-.65 1.06.07 1.62 1.09 1.62 1.09.94 1.61 2.46 1.15 3.06.88.09-.68.37-1.15.68-1.41-2.33-.27-4.78-1.17-4.78-5.21 0-1.15.41-2.08 1.08-2.81-.11-.27-.47-1.37.1-2.86 0 0 .89-.29 2.9 1.07A10.1 10.1 0 0112 6.85c.9.004 1.81.12 2.66.35 2-1.36 2.88-1.07 2.88-1.07.57 1.49.21 2.59.1 2.86.68.73 1.08 1.66 1.08 2.81 0 4.05-2.45 4.93-4.78 5.19.38.33.72.99.72 1.99 0 1.44-.01 2.6-.01 2.96 0 .28.19.62.73.51C20 20.11 23 16.16 23 11.5 23 5.24 18.27.5 12 .5z" fill="#011225"/></svg>
+              GitHub
+            </a>
+            <a class="btn-ghost" href="#contact">Contact</a>
+            <a class="btn-ghost" id="resumeDownload" href="#" onclick="downloadResume(event)">Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Left column -->
+      <section>
+        <div class="card">
+          <h2 class="section-title">About</h2>
+          <p class="lead">Backend Engineer building scalable microservices and event-driven systems. I modernize Java platforms (8→21), migrate Spring Boot (2→3) and design high-throughput data pipelines with Kafka and Ignite.</p>
+          <p class="lead">I mentor teams, optimize performance, and automate delivery pipelines on AWS with Docker and CI/CD.</p>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="projects">
+            <a class="project" href="https://github.com/nehru-usare/financial-microservices" target="_blank" rel="noopener">
+              <h3>💼 Financial Microservices Platform</h3>
+              <p>Event-driven financial data processing with Kafka & Ignite — high throughput microservices for trading analytics.</p>
+              <div class="tags"><span class="tag">Java 21</span><span class="tag">Spring Boot 3.x</span><span class="tag">Kafka</span></div>
+            </a>
+
+            <a class="project" href="https://github.com/nehru-usare/reporting-tool" target="_blank" rel="noopener">
+              <h3>📊 Reporting Automation Tool</h3>
+              <p>Enterprise reporting engine (KNIME-like) using Spring Boot, Oracle SQL and Aspose/Apache POI for exports.</p>
+              <div class="tags"><span class="tag">Spring Boot</span><span class="tag">Oracle</span><span class="tag">Aspose/POI</span></div>
+            </a>
+
+            <a class="project" href="https://github.com/nehru-usare/cicd-pipeline" target="_blank" rel="noopener">
+              <h3>⚙️ CI/CD Pipeline Setup</h3>
+              <p>Automated build & deploy pipelines for microservices using Jenkins, Docker & GitHub Actions.</p>
+              <div class="tags"><span class="tag">Jenkins</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span></div>
+            </a>
+
+            <a class="project" href="https://github.com/nehru-usare" target="_blank" rel="noopener">
+              <h3>🔎 More on GitHub</h3>
+              <p>Other utilities, internal tools, and demos — open-source snippets and experiments.</p>
+              <div class="tags"><span class="tag">Microservices</span><span class="tag">Utilities</span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h2 class="section-title">Skills</h2>
+
+          <div class="skills-grid" aria-hidden>
+            <div class="skill-group">
+              <h4>Languages & Databases</h4>
+              <div class="skill-list">
+                <div class="code">Java (8–21), C, C++, JavaScript</div>
+                <div class="code">SQL, PL/SQL, Oracle, MySQL, MongoDB, PostgreSQL</div>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h4>Frameworks & Architecture</h4>
+              <div class="skill-list">
+                <div class="code">Spring Boot, Spring MVC, Spring Security</div>
+                <div class="code">JPA/Hibernate, Microservices, REST APIs, Event-Driven</div>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h4>Cloud, DevOps & CI/CD</h4>
+              <div class="skill-list">
+                <div class="code">AWS (EC2,S3), Docker, Kubernetes (Basic)</div>
+                <div class="code">Jenkins, GitHub Actions, SonarQube, Maven, Gradle</div>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h4>Messaging & Caching</h4>
+              <div class="skill-list">
+                <div class="code">Apache Kafka, WebSockets, Apache Ignite</div>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h4>Testing & QA</h4>
+              <div class="skill-list">
+                <div class="code">JUnit 5, Mockito, Testcontainers</div>
+                <div class="code">Postman, JMeter</div>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h4>Tools & PM</h4>
+              <div class="skill-list">
+                <div class="code">IntelliJ, VS Code, Eclipse, Jira, Agile/Scrum</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Right column -->
+      <aside class="side">
+        <div class="card">
+          <h2 class="section-title">Profile & Stats</h2>
+
+          <div style="text-align:center;margin-bottom:10px">
+            <!-- GitHub profile summary card -->
+            <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nehru-usare&theme=tokyonight" alt="Profile Summary" style="max-width:100%;border-radius:10px;border:1px solid var(--glass-border)">
+          </div>
+
+          <div class="stats">
+            <div class="stat"><small>Total Repos</small><strong id="repoCount">—</strong></div>
+            <div class="stat"><small>Top Language</small><strong id="topLang">—</strong></div>
+            <div class="stat"><small>Open to</small><strong>Backend Roles / Microservices</strong></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Contact</h2>
+          <div class="contact">
+            <div class="muted">Email</div>
+            <div style="display:flex;gap:8px;align-items:center">
+              <div class="copy" id="emailBox">nehruusare630@gmail.com</div>
+              <button class="btn-ghost" onclick="copyEmail()">Copy</button>
+              <a class="btn" href="mailto:nehruusare630@gmail.com">Email</a>
+            </div>
+
+            <div class="muted" style="margin-top:8px">LinkedIn</div>
+            <a href="https://linkedin.com/in/nehru-usare" target="_blank" class="copy">linkedin.com/in/nehru-usare</a>
+
+            <div class="muted" style="margin-top:8px">Resume</div>
+            <a id="resumeLink" class="copy" href="#" onclick="downloadResume(event)">Download (PDF)</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Tech Radar</h2>
+          <div style="text-align:center">
+            <!-- Tech radar widget (external) -->
+            <img src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=nehru-usare" alt="Skills Graph" style="width:100%;border-radius:8px;border:1px solid var(--glass-border)">
+          </div>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Nehru Usare — Java Backend Engineer • <span class="muted">Hyderabad, Telangana</span></div>
+    </footer>
+  </div>
+
+  <script>
+    // Replace these repo links if yours are different
+    const GITHUB_USERNAME = 'nehru-usare';
+
+    // small helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Fetch simple GitHub stats via public API (rate-limited; fine for small use)
+    async function fetchGitHubMeta() {
+      try {
+        const res = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}`);
+        if(!res.ok) return;
+        const data = await res.json();
+        document.getElementById('repoCount').textContent = data.public_repos ?? '—';
+      } catch (e) {
+        console.warn('GitHub meta fetch failed', e);
+      }
+    }
+    fetchGitHubMeta();
+
+    // small top languages detection via GitHub readme-stats endpoint (image alt trick)
+    async function fetchTopLang() {
+      try {
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.src = `https://github-readme-stats.vercel.app/api/top-langs/?username=${GITHUB_USERNAME}&layout=compact&theme=tokyonight`;
+        img.onload = () => {
+          // we cannot parse image; instead just show 'View' link
+          document.getElementById('topLang').textContent = 'View on GitHub card';
+        };
+        img.onerror = () => {
+          document.getElementById('topLang').textContent = '—';
+        };
+      } catch (e) {
+        document.getElementById('topLang').textContent = '—';
+      }
+    }
+    fetchTopLang();
+
+    // Copy email
+    function copyEmail(){
+      const txt = document.getElementById('emailBox').textContent;
+      navigator.clipboard?.writeText(txt).then(()=> {
+        const btn = document.querySelector('.btn-ghost');
+        const original = btn.textContent;
+        btn.textContent = 'Copied ✓';
+        setTimeout(()=> btn.textContent = original, 1500);
+      }).catch(()=> alert('Copy failed — please copy manually.'));
+    }
+
+    // Download resume placeholder - instruct user to upload resume at /assets/resume.pdf in repo
+    function downloadResume(e){
+      e.preventDefault();
+      const resumeUrl = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '/') + 'assets/resume.pdf';
+      // try to open resume
+      fetch(resumeUrl, {method:'HEAD'}).then(r => {
+        if(r.ok) {
+          window.open(resumeUrl, '_blank');
+        } else {
+          // fallback: show instructions
+          alert('Resume not found at ' + resumeUrl + '.\n\nPlease upload your resume to the repo at `assets/resume.pdf` or edit the link in index.html to point to your resume file.');
+        }
+      }).catch(()=> {
+        alert('Unable to fetch resume. Upload `assets/resume.pdf` to your repo or update the resume link in the HTML.');
+      });
+    }
+
+    // Allow opening project links with keyboard
+    document.querySelectorAll('.project').forEach(p => {
+      p.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter') window.open(p.href, '_blank');
+      });
+    });
+
+    // Small accessibility: focus outlines
+    document.addEventListener('keyup', (e) => {
+      if(e.key === 'Tab') document.body.classList.add('show-focus');
+    });
+  </script>
+</body>
+</html>
