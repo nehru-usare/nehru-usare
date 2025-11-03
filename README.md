@@ -15,24 +15,61 @@
 ---
 
 ## 🚀 **About Me**
-💻 Backend Engineer with **4 years of experience** building scalable microservices and event-driven architectures.  
-⚙️ Specialized in **Spring Boot (2→3)**, **Java (8→21)**, **Kafka**, and **AWS**-based distributed systems.  
-☁️ Passionate about **system design**, **performance optimization**, and **team mentorship**.  
-🧠 Always learning, building, and automating — “clean code is my craft.”  
+💻 Backend Engineer with **4 years of experience** building scalable microservices and distributed systems.  
+⚙️ Specialized in **Spring Boot (2→3)**, **Java (8→21)**, **Kafka**, and **AWS**-based architectures.  
+☁️ Passionate about **system design**, **performance optimization**, and **clean, maintainable code**.  
+🧠 Always learning, building, and automating — “Clean code is my craft.”  
 
 ---
 
-## 🧰 **Tech Stack**
+## 🧠 **Technical Skills**
 
+<div align="center">
+
+### 💻 <span style="color:#FFD700;">Languages & Databases</span>
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=java,spring,hibernate,aws,docker,kubernetes,postgres,mysql,mongodb,redis,kafka,git,githubactions,jenkins" />
+  <img src="https://skillicons.dev/icons?i=java,c,cpp,js,postgresql,mysql,mongodb,oracle" />
 </p>
+<code>Java (8–21)</code> • <code>C</code> • <code>C++</code> • <code>JavaScript</code> • <code>SQL</code> • <code>PL/SQL</code> • <code>Oracle (Primary)</code> • <code>MySQL</code> • <code>MongoDB</code>
 
-**Languages:** Java (8–21), SQL, PL/SQL, JavaScript  
-**Frameworks:** Spring Boot, Spring Security, JPA/Hibernate, REST APIs, Microservices  
-**Cloud & DevOps:** AWS (EC2, S3), Docker, Kubernetes, Jenkins, GitHub Actions, Maven, Gradle, SonarQube  
-**Messaging & Caching:** Kafka, WebSockets, Apache Ignite  
-**Testing:** JUnit 5, Mockito, Testcontainers, Postman, JMeter  
+---
+
+### 🧩 <span style="color:#00CED1;">Frameworks & Architecture</span>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=spring,hibernate" />
+</p>
+<code>Spring Boot</code> • <code>Spring MVC</code> • <code>Spring Security</code> • <code>JPA / Hibernate</code> • <code>Microservices</code> • <code>REST API Design</code> • <code>Event-Driven Architecture</code>
+
+---
+
+### ☁️ <span style="color:#32CD32;">Cloud, DevOps & CI/CD</span>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=aws,docker,kubernetes,jenkins,githubactions,maven,gradle,sonarqube" />
+</p>
+<code>AWS (EC2, S3)</code> • <code>Docker</code> • <code>Kubernetes (Basic)</code> • <code>Jenkins</code> • <code>GitHub Actions</code> • <code>SonarQube</code> • <code>Maven</code> • <code>Gradle</code>
+
+---
+
+### 🔁 <span style="color:#FF69B4;">Messaging & Caching</span>
+<code>Apache Kafka</code> • <code>WebSockets</code> • <code>Apache Ignite</code>
+
+---
+
+### 🧪 <span style="color:#FFA500;">Testing & Quality Assurance</span>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=postman" />
+</p>
+<code>JUnit 5</code> • <code>Mockito</code> • <code>Testcontainers</code> • <code>Postman</code> • <code>JMeter</code>
+
+---
+
+### ⚙️ <span style="color:#00BFFF;">Tools & Project Management</span>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=intellij,vscode,eclipse" />
+</p>
+<code>IntelliJ IDEA</code> • <code>VS Code</code> • <code>Eclipse</code> • <code>Jira</code> • <code>Agile / Scrum</code>
+
+</div>
 
 ---
 
