@@ -1,9 +1,22 @@
-const toggle = document.getElementById('theme-toggle');
-toggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+// assets/js/theme.js
+
+const themeToggle = document.getElementById("theme-toggle");
+const root = document.documentElement;
+
+// Default: dark theme
+const savedTheme = localStorage.getItem("theme") || "dark";
+root.setAttribute("data-theme", savedTheme);
+updateIcon(savedTheme);
+
+themeToggle.addEventListener("click", () => {
+  const currentTheme = root.getAttribute("data-theme");
+  const nextTheme = currentTheme === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  localStorage.setItem("theme", nextTheme);
+  updateIcon(nextTheme);
 });
 
-if (localStorage.getItem('theme') === 'dark') {
-  document.body.classList.add('dark');
+// Change toggle icon dynamically
+function updateIcon(theme) {
+  themeToggle.textContent = theme === "dark" ? "🌞" : "🌙";
 }
