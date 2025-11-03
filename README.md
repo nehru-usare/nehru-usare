@@ -1,4 +1,4 @@
-<!-- 🌌 Pro GitHub Profile Dashboard v3 — Nehru Usare -->
+<!-- 🌌 Pro GitHub Profile Dashboard v4 — Nehru Usare -->
 <div align="center">
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?color=3AB0FF&size=26&center=true&vCenter=true&width=800&lines=👋+Hi,+I'm+Nehru+Usare;Java+Backend+Engineer;Spring+Boot+%7C+Microservices+%7C+Kafka+%7C+AWS;Building+Scalable+Distributed+Systems)](https://git.io/typing-svg)
@@ -11,6 +11,13 @@
 ![Profile Views](https://komarev.com/ghpvc/?username=nehru-usare&color=3AB0FF&style=for-the-badge)
 
 </div>
+
+---
+
+## 🧾 **Profile Summary**
+<p align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nehru-usare&theme=tokyonight" alt="Profile Summary Card" />
+</p>
 
 ---
 
@@ -97,10 +104,10 @@
 ---
 
 ## 🚧 **Currently Working On**
-- ⚙️ Upgrading **Spring Boot 3.x** services with **Kafka** and **Apache Ignite** for event-driven processing  
+- ⚙️ Upgrading **Spring Boot 3.x** services with **Kafka** and **Apache Ignite**  
 - ☁️ Building containerized microservices on **AWS ECS + Docker**  
-- 🧩 Exploring **Kubernetes Helm** and **GitHub Actions** for CI/CD automation  
-- 📈 Learning **Reactive Programming (WebFlux)** for non-blocking API design  
+- 🧩 Exploring **Kubernetes Helm** & **GitHub Actions** for CI/CD automation  
+- 📈 Learning **Reactive Programming (WebFlux)**  
 
 ---
 
@@ -115,7 +122,6 @@
 ---
 
 ## 🧩 **Tech Radar**
-*(Auto-generated visual overview of skills)*  
 ![Skills Graph](https://cr-skills-chart-widget.azurewebsites.net/api/api?username=nehru-usare)
 
 ---
@@ -158,7 +164,7 @@
   <summary>🎯 <b>Fun Facts & Highlights</b></summary>
 
   - 💡 Mentored 5+ backend developers in Spring Boot 3.x  
-  - ⚙️ Automated reporting workflows for enterprise clients  
+  - ⚙️ Automated reporting workflows improving productivity by 60%  
   - ☁️ Built scalable cloud-native systems on AWS  
   - 🧠 Contributor to open-source backend projects  
 </details>
