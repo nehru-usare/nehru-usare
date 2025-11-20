@@ -21,6 +21,11 @@
 
 ---
 
+## 🐍 **GitHub Contribution Snake**
+![Snake animation](https://github.com/nehru-usare/nehru-usare/blob/output/github-contribution-grid-snake-dark.svg)
+
+---
+
 ## 🚀 **About Me**
 💻 Backend Engineer with **4 years of experience** designing scalable microservices and distributed systems.  
 ⚙️ Expert in **Spring Boot (2→3)**, **Java (8→21)**, **Kafka**, and **AWS** for real-time, high-performance applications.  
@@ -50,12 +55,6 @@
   - ☁️ Built scalable cloud-native systems on AWS  
   - 🧠 Contributor to open-source backend projects  
 </details>
-
----
-
-## 🐍 **GitHub Contribution Snake**
-![Snake animation](https://github.com/nehru-usare/nehru-usare/blob/output/github-contribution-grid-snake-dark.svg)
-
 ---
 
 ## 🧠 **Technical Skills**
