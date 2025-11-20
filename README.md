@@ -29,6 +29,35 @@
 
 ---
 
+## 📊 **GitHub Analytics**
+<p align="center">
+  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=nehru-usare&show_icons=true&theme=tokyonight&hide_border=true" />
+  <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=nehru-usare&theme=tokyonight&hide_border=true" />
+</p>
+
+<p align="center">
+  <img width="50%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=nehru-usare&layout=compact&theme=tokyonight&hide_border=true" />
+</p>
+
+![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=nehru-usare&theme=tokyo-night)
+
+---
+<details>
+  <summary>🎯 <b>Fun Facts & Highlights</b></summary>
+
+  - 💡 Mentored 5+ backend developers in Spring Boot 3.x  
+  - ⚙️ Automated reporting workflows improving productivity by 60%  
+  - ☁️ Built scalable cloud-native systems on AWS  
+  - 🧠 Contributor to open-source backend projects  
+</details>
+
+---
+
+## 🐍 **GitHub Contribution Snake**
+![Snake animation](https://github.com/nehru-usare/nehru-usare/blob/output/github-contribution-grid-snake-dark.svg)
+
+---
+
 ## 🧠 **Technical Skills**
 
 <div align="center">
@@ -123,42 +152,6 @@
 - Delivered secure, compliant solutions for a **US Federal Client (Finance domain)**  
 
 </details>
-
----
-
-## 📊 **GitHub Analytics**
-<p align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=nehru-usare&show_icons=true&theme=tokyonight&hide_border=true" />
-  <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=nehru-usare&theme=tokyonight&hide_border=true" />
-</p>
-
-<p align="center">
-  <img width="50%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=nehru-usare&layout=compact&theme=tokyonight&hide_border=true" />
-</p>
-
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=nehru-usare&theme=tokyo-night)
-
----
-
-## 🏆 **Achievements**
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=nehru-usare&theme=tokyonight&no-bg=true&margin-w=10" />
-</p>
-
-<details>
-  <summary>🎯 <b>Fun Facts & Highlights</b></summary>
-
-  - 💡 Mentored 5+ backend developers in Spring Boot 3.x  
-  - ⚙️ Automated reporting workflows improving productivity by 60%  
-  - ☁️ Built scalable cloud-native systems on AWS  
-  - 🧠 Contributor to open-source backend projects  
-</details>
-
----
-
-## 🐍 **GitHub Contribution Snake**
-![Snake animation](https://github.com/nehru-usare/nehru-usare/blob/output/github-contribution-grid-snake-dark.svg)
-
 ---
 
 ## 💬 **Developer Quote**
