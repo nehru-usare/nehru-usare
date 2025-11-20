@@ -111,21 +111,6 @@
 
 ---
 
-## 🌟 **Featured Projects**
-
-| Project | Description | Tech Stack |
-|----------|--------------|-------------|
-| [💼 Financial Microservices Platform](https://github.com/nehru-usare/financial-microservices) | Event-driven financial data processing system | Java 21, Spring Boot 3.x, Kafka, Ignite |
-| [📊 Reporting Automation Tool](https://github.com/nehru-usare/reporting-tool) | Enterprise-grade reporting engine like KNIME | Spring Boot, Oracle SQL, Aspose/POI |
-| [⚙️ CI/CD Pipeline Setup](https://github.com/nehru-usare/cicd-pipeline) | Automated build & deploy workflow | Jenkins, Docker, AWS, GitHub Actions |
-
----
-
-## 🧩 **Tech Radar**
-![Skills Graph](https://cr-skills-chart-widget.azurewebsites.net/api/api?username=nehru-usare)
-
----
-
 ## 💼 **Professional Experience**
 <details>
   <summary>🔹 <b>Proounce Solutions Pvt Ltd — Java Backend Developer (Lead)</b></summary>
