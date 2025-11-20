@@ -13,15 +13,11 @@
 </div>
 
 ---
-
-## 🧾 **Profile Summary**
 <p align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=nehru-usare&theme=tokyonight" alt="Profile Summary Card" />
 </p>
 
 ---
-
-## 🐍 **GitHub Contribution Snake**
 ![Snake animation](https://github.com/nehru-usare/nehru-usare/blob/output/github-contribution-grid-snake-dark.svg)
 
 ---
