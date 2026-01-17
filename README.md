@@ -1,76 +1,61 @@
-# 💫 Nehru Usare — Senior Backend Engineer / Architect
+# 👨‍💻 Nehru Usare
 
-<div align="center">
+**Tech Lead | Backend Engineering | Distributed Systems**
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=3B82F6\&size=28\&center=true\&vCenter=true\&width=900\&lines=👋+Hey,+I'm+Nehru+Usare;Senior+Java+Backend+Engineer;4%2B+Years+%7C+Spring+Boot+%7C+Kafka+%7C+Microservices;Building+Enterprise-Grade+Distributed+Systems;High+Performance+%7C+Scalable+Architecture)](https://git.io/typing-svg)
-
----
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://linkedin.com/in/nehru-usare)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/nehru-usare)
-[![Email](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge\&logo=gmail\&logoColor=white)](mailto:nehruusare630@gmail.com)
-![Profile Views](https://komarev.com/ghpvc/?username=nehru-usare\&color=3B82F6\&style=for-the-badge)
-
-</div>
+📍 Hyderabad, India
+📧 [nehrusare630@gmail.com](mailto:nehrusare630@gmail.com)
+🔗 [LinkedIn](https://linkedin.com/in/nehru-usare) • [GitHub](https://github.com/nehru-usare)
 
 ---
 
 ## 🚀 About Me
 
-```java
-public class NehruUsare implements BackendArchitect {
+I currently work as a **Tech Lead**, leading backend development for enterprise-grade applications while actively growing toward a **Backend / Software Architect role**.
 
-    private String role = "Senior Java Backend Engineer";
-    private String location = "Hyderabad, India";
-    private int experience = 4; // years
+My work involves owning backend architecture, guiding technical decisions, mentoring engineers, and ensuring systems are reliable, scalable, and production-ready — while staying hands-on with **Java, Spring Boot, Apache Kafka, and distributed systems**.
 
-    private String[] expertise = {
-        "Microservices Architecture",
-        "Distributed Systems",
-        "Event-Driven Architecture",
-        "High-Performance APIs",
-        "Enterprise Reporting Systems"
-    };
+I have strong experience in the **financial domain**, where system reliability, security, and data consistency are critical. Over time, my focus has evolved from implementing features to **designing systems that scale, adapt, and remain maintainable as complexity grows**.
 
-    @Override
-    public String currentFocus() {
-        return "Designing scalable backend systems using " +
-               "Spring Boot 3.x, Apache Kafka, Redis & AWS";
-    }
-}
-```
+I am particularly interested in **event-driven architecture, system design, observability, and performance optimization**, and I continuously work on improving how backend systems are structured and operated in real-world production environments.
 
 ---
 
-## 💼 Professional Snapshot
+## 👨‍💼 Current Role — Tech Lead
 
-* 🏢 **Organization:** Proounce Solutions Pvt Ltd — Hyderabad
-* 💼 **Role:** Senior Java Backend Engineer
-* 🚀 **Expertise:** Java 8→21 | Spring Boot 2.x→3.x | Monolith → Microservices
-* 🔄 **Messaging:** Apache Kafka (Producer, Consumer, Retry, DLT)
-* 📊 **Reporting Specialist:** High-volume financial & analytical reporting systems
-* ☁️ **Cloud:** AWS + Docker-based deployments
+**Organization:** Proounce Solutions Pvt Ltd
+**Location:** Hyderabad, India
+
+### Key Responsibilities
+
+* Technical ownership of backend services
+* Designing microservices and system architecture
+* Kafka-based event-driven workflow design
+* Code reviews and quality governance
+* Mentoring backend engineers
+* Architecture discussions and design reviews
+* Driving performance, reliability, and scalability
 
 ---
 
-## 🏗️ Core Technical Expertise
+## 🏗️ Architecture & Engineering Focus
 
 * Microservices Architecture
 * Event-Driven Systems (Kafka)
-* Distributed Transactions
-* Reporting & Data Processing Systems
-* High Availability & Scalability
+* Distributed System Design
+* Service-to-Service Communication
+* Retry, Circuit Breaker & Fault Tolerance
+* Database Design & Optimization
 * Logging, Monitoring & Observability
-* Clean Architecture & SOLID principles
+* Clean Architecture & SOLID Principles
 
 ---
 
-## 🛠️ Technology Stack
+## ⚙️ Technology Stack
 
 ### Backend
 
-* Java (8 – 21)
-* Spring Boot 2.x / 3.x
+* Java (8 → 21)
+* Spring Boot (2.x → 3.x)
 * Spring Security
 * Hibernate / JPA
 * REST APIs
@@ -78,8 +63,9 @@ public class NehruUsare implements BackendArchitect {
 ### Messaging
 
 * Apache Kafka
-* Kafka Consumer Groups
+* Consumer Groups
 * Retry Topics & Dead Letter Topics
+* Idempotent Producers
 
 ### Databases
 
@@ -100,115 +86,97 @@ public class NehruUsare implements BackendArchitect {
 
 * Apache POI
 * Aspose
-* Large-scale PDF / Excel report generation
-* Async & Batch processing
+* Async & Batch Processing
 
 ---
 
 ## 🏆 Key Projects
 
----
-
 ### 💰 Financial Management Platform
 
 **Domain:** Finance (US Federal Client)
+**Role:** Tech Lead
 
 **Tech Stack:**
-Java 21 | Spring Boot 3.x | Apache Kafka | Redis | Oracle | PostgreSQL | Docker | AWS
+Java 21 | Spring Boot 3.x | Apache Kafka | Redis | Oracle | AWS | Docker
 
 **Highlights:**
 
-* Built **event-driven microservices** using Kafka
-* Implemented **secure financial workflows**
-* Designed **high-availability backend services**
-* Integrated multi-step approval systems
-* Supported high transaction volume with stable performance
-* Followed strict compliance & audit requirements
+* Designed backend architecture for secure financial workflows
+* Implemented event-driven processing using Kafka
+* Supported high-volume transaction processing
+* Ensured compliance, auditing, and system stability
+* Guided team through Spring Boot 3 migration
 
 ---
 
 ### 📊 Enterprise Reporting System
 
 **Domain:** Financial Reporting & Analytics
+**Role:** Tech Lead
 
 **Tech Stack:**
-Spring Boot | Java | Oracle | Apache POI | Aspose | Kafka | Async Processing
+Spring Boot | Java | Oracle | Apache POI | Aspose
 
 **Highlights:**
 
-* Designed **complex financial reports** (PDF, Excel)
-* Handled **large datasets (millions of records)**
-* Reduced report generation time significantly
-* Implemented async and batch-based processing
-* Automated scheduled reporting workflows
-* Improved reporting productivity by **~60%**
+* Designed scalable reporting architecture
+* Built complex PDF and Excel reporting pipelines
+* Handled large datasets efficiently
+* Automated scheduled report generation
+* Improved reporting productivity by ~60%
 
 ---
 
-### 🔄 Internal Common Services Platform
+### 🔄 Common Services Platform
 
-**Purpose:** Shared services across multiple microservices
+**Purpose:** Shared backend utilities across microservices
 
-**Features:**
-
-* Centralized logging module
-* Common exception handling
-* Standard API response framework
-* Shared security components
+* Centralized exception handling
+* Common API response framework
+* Reusable security components
+* Shared logging and validation modules
 * Reduced duplication across services
 
 ---
 
 ## 📘 Current Focus
 
-```yaml
-Learning:
-  - Kafka internals & architecture
-  - Event streaming design patterns
-  - Distributed system design
-  - Advanced Spring Boot 3.x
-  - System observability best practices
-
-Practicing:
-  - Clean architecture
-  - Performance tuning
-  - Production-grade logging
-  - Fault-tolerant design
-```
+* Deepening Kafka architecture knowledge
+* Designing resilient event-driven systems
+* Improving system observability
+* Performance tuning and scalability design
+* Growing from Tech Lead to Architect mindset
 
 ---
 
-## 💡 Engineering Principles
+## 💡 Engineering Philosophy
 
-> “I focus on building systems that are reliable, scalable, and easy to evolve.”
+> “Good systems are not defined by how fast they are built,
+> but by how well they survive scale, failure, and change.”
 
-* ✔ Clean architecture over quick fixes
-* ✔ Scalability by design
-* ✔ Observability as first-class citizen
-* ✔ Performance before premature optimization
-* ✔ Simplicity over complexity
+**Core Principles:**
+
+* Architecture before implementation
+* Simplicity over complexity
+* Observability as a first-class citizen
+* Reliability over shortcuts
+* Continuous learning and improvement
 
 ---
 
-## 📊 GitHub Stats
+## 📊 GitHub Activity
 
-<p align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=nehru-usare&show_icons=true&theme=tokyonight&hide_border=true" />
-  <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=nehru-usare&theme=tokyonight&hide_border=true" />
-</p>
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=nehru-usare\&show_icons=true\&hide_border=true)
 
 ---
 
 ## 🤝 Let’s Connect
 
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://linkedin.com/in/nehru-usare)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/nehru-usare)
-[![Email](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge\&logo=gmail\&logoColor=white)](mailto:nehruusare630@gmail.com)
+* 🔗 LinkedIn: [https://linkedin.com/in/nehru-usare](https://linkedin.com/in/nehru-usare)
+* 📧 Email: [nehrusare630@gmail.com](mailto:nehrusare630@gmail.com)
+* 💻 GitHub: [https://github.com/nehru-usare](https://github.com/nehru-usare)
 
 ---
 
-⭐ *Building scalable backend systems with clarity, discipline, and purpose.*
-
-</div>
+⭐ *Tech Lead focused on building scalable backend systems and growing toward architecture leadership.*
