@@ -1,39 +1,61 @@
+<div align="center">
+
 # 👨‍💻 Nehru Usare
 
-**Tech Lead | Backend Engineering | Distributed Systems**
+### Tech Lead · Backend Engineering · Distributed Systems
+
+<br/>
+
+<a href="https://linkedin.com/in/nehru-usare">
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin" />
+</a>
+<a href="mailto:nehrusare630@gmail.com">
+  <img src="https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail" />
+</a>
+<a href="https://github.com/nehru-usare">
+  <img src="https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github" />
+</a>
+
+<br/><br/>
 
 📍 Hyderabad, India
-📧 [nehrusare630@gmail.com](mailto:nehrusare630@gmail.com)
-🔗 [LinkedIn](https://linkedin.com/in/nehru-usare) • [GitHub](https://github.com/nehru-usare)
+
+</div>
 
 ---
 
 ## 🚀 About Me
 
-I currently work as a **Tech Lead**, leading backend development for enterprise-grade applications while actively growing toward a **Backend / Software Architect role**.
+I am a **Tech Lead specializing in backend engineering and distributed systems**, with hands-on experience designing and delivering **scalable, reliable, production-grade platforms**.
 
-My work involves owning backend architecture, guiding technical decisions, mentoring engineers, and ensuring systems are reliable, scalable, and production-ready — while staying hands-on with **Java, Spring Boot, Apache Kafka, and distributed systems**.
+I currently lead backend development for enterprise applications, taking ownership of **system architecture, technical decisions, and engineering quality**, while actively mentoring developers and staying deeply involved in implementation.
 
-I have strong experience in the **financial domain**, where system reliability, security, and data consistency are critical. Over time, my focus has evolved from implementing features to **designing systems that scale, adapt, and remain maintainable as complexity grows**.
+My experience lies primarily in the **financial domain**, where system correctness, security, fault tolerance, and observability are critical.
+Over time, my focus has evolved from feature delivery toward **building systems that scale gracefully and remain maintainable under growing complexity**.
 
-I am particularly interested in **event-driven architecture, system design, observability, and performance optimization**, and I continuously work on improving how backend systems are structured and operated in real-world production environments.
+I am actively working toward a **Backend / Software Architect role**, with strong interest in:
+
+* Event-driven architecture
+* Kafka-based system design
+* Distributed system patterns
+* Observability and performance engineering
 
 ---
 
-## 👨‍💼 Current Role — Tech Lead
+## 👨‍💼 Current Role
 
-**Organization:** Proounce Solutions Pvt Ltd
-**Location:** Hyderabad, India
+**Tech Lead — Backend Engineering**
+**Proounce Solutions Pvt. Ltd · Hyderabad**
 
-### Key Responsibilities
+**Responsibilities**
 
-* Technical ownership of backend services
-* Designing microservices and system architecture
-* Kafka-based event-driven workflow design
-* Code reviews and quality governance
+* Backend architecture ownership
+* Microservices design and evolution
+* Kafka-driven event workflows
+* Architecture and design reviews
+* Code quality and best practices
 * Mentoring backend engineers
-* Architecture discussions and design reviews
-* Driving performance, reliability, and scalability
+* Driving scalability and reliability
 
 ---
 
@@ -43,9 +65,9 @@ I am particularly interested in **event-driven architecture, system design, obse
 * Event-Driven Systems (Kafka)
 * Distributed System Design
 * Service-to-Service Communication
-* Retry, Circuit Breaker & Fault Tolerance
-* Database Design & Optimization
-* Logging, Monitoring & Observability
+* Retry, Circuit Breaker & Failure Handling
+* Database Modeling & Optimization
+* Logging, Metrics & Distributed Tracing
 * Clean Architecture & SOLID Principles
 
 ---
@@ -69,10 +91,7 @@ I am particularly interested in **event-driven architecture, system design, obse
 
 ### Databases
 
-* Oracle
-* PostgreSQL
-* MySQL
-* MongoDB
+* Oracle · PostgreSQL · MySQL · MongoDB
 
 ### Cloud & DevOps
 
@@ -82,101 +101,92 @@ I am particularly interested in **event-driven architecture, system design, obse
 * GitHub Actions
 * SonarQube
 
-### Reporting & Processing
-
-* Apache POI
-* Aspose
-* Async & Batch Processing
-
 ---
 
-## 🏆 Key Projects
+## 🏆 Selected Projects
 
 ### 💰 Financial Management Platform
 
-**Domain:** Finance (US Federal Client)
 **Role:** Tech Lead
+**Domain:** US Federal Finance
 
-**Tech Stack:**
-Java 21 | Spring Boot 3.x | Apache Kafka | Redis | Oracle | AWS | Docker
-
-**Highlights:**
-
-* Designed backend architecture for secure financial workflows
-* Implemented event-driven processing using Kafka
-* Supported high-volume transaction processing
-* Ensured compliance, auditing, and system stability
-* Guided team through Spring Boot 3 migration
+* Designed secure backend architecture for financial workflows
+* Implemented Kafka-based asynchronous processing
+* Supported high-throughput transactional systems
+* Ensured auditability, compliance, and data integrity
+* Led Spring Boot 3 migration
 
 ---
 
-### 📊 Enterprise Reporting System
-
-**Domain:** Financial Reporting & Analytics
-**Role:** Tech Lead
-
-**Tech Stack:**
-Spring Boot | Java | Oracle | Apache POI | Aspose
-
-**Highlights:**
+### 📊 Enterprise Reporting Platform
 
 * Designed scalable reporting architecture
-* Built complex PDF and Excel reporting pipelines
-* Handled large datasets efficiently
-* Automated scheduled report generation
-* Improved reporting productivity by ~60%
+* Built PDF & Excel generation pipelines
+* Optimized large dataset processing
+* Automated scheduled reporting workflows
+* Improved reporting efficiency by ~60%
 
 ---
 
 ### 🔄 Common Services Platform
 
-**Purpose:** Shared backend utilities across microservices
-
 * Centralized exception handling
-* Common API response framework
+* Shared API response framework
 * Reusable security components
-* Shared logging and validation modules
+* Unified logging & validation
 * Reduced duplication across services
 
 ---
 
 ## 📘 Current Focus
 
-* Deepening Kafka architecture knowledge
-* Designing resilient event-driven systems
-* Improving system observability
-* Performance tuning and scalability design
-* Growing from Tech Lead to Architect mindset
+* Advanced Kafka architecture patterns
+* Resilient event-driven system design
+* Observability (metrics, tracing, logging)
+* Performance tuning at scale
+* Transitioning from Tech Lead → Architect
 
 ---
 
 ## 💡 Engineering Philosophy
 
-> “Good systems are not defined by how fast they are built,
-> but by how well they survive scale, failure, and change.”
+> *Good systems are not defined by speed of delivery,
+> but by how well they survive scale, failure, and change.*
 
-**Core Principles:**
+**Principles**
 
 * Architecture before implementation
-* Simplicity over complexity
-* Observability as a first-class citizen
+* Simplicity over accidental complexity
+* Observability as a first-class concern
 * Reliability over shortcuts
-* Continuous learning and improvement
+* Continuous learning
 
 ---
 
 ## 📊 GitHub Activity
 
+<div align="center">
+
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=nehru-usare\&show_icons=true\&hide_border=true)
+
+</div>
 
 ---
 
 ## 🤝 Let’s Connect
 
-* 🔗 LinkedIn: [https://linkedin.com/in/nehru-usare](https://linkedin.com/in/nehru-usare)
-* 📧 Email: [nehrusare630@gmail.com](mailto:nehrusare630@gmail.com)
-* 💻 GitHub: [https://github.com/nehru-usare](https://github.com/nehru-usare)
+<div align="center">
+
+<a href="https://linkedin.com/in/nehru-usare">
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin" />
+</a>
+
+<a href="mailto:nehrusare630@gmail.com">
+  <img src="https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail" />
+</a>
+
+</div>
 
 ---
 
-⭐ *Tech Lead focused on building scalable backend systems and growing toward architecture leadership.*
+⭐ **Tech Lead focused on building scalable backend systems and evolving toward architecture leadership.**
