@@ -1,58 +1,81 @@
-# 👋 Hi, I'm Nehru Usare
+# Nehru Usare
 
-**Tech Lead · Backend Engineering · Distributed Systems**  
-📍 Hyderabad, India  
+## Backend Engineering Lead | Distributed Systems | Architect in Progress  
+Hyderabad, India  
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/nehru-usare)
-[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:nehrusare630@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/nehru-usare)
-
----
-
-## 🚀 About Me
-
-Backend Tech Lead specializing in **scalable, reliable, production-grade systems** — primarily in the **financial domain**, where correctness, auditability, and resilience are critical.
-
-I currently own backend architecture and technical decisions for enterprise systems, while mentoring engineers and staying hands-on with implementation.
-
-🎯 **Goal:** Transitioning from *Tech Lead → Backend / Software Architect*
+[LinkedIn](https://linkedin.com/in/nehru-usare) • 
+[Email](mailto:nehrusare630@gmail.com) • 
+[GitHub](https://github.com/nehru-usare)
 
 ---
 
-## 🏗 Architecture Focus
+## Executive Summary
 
-- Microservices Architecture  
-- Event-Driven Systems (Kafka)  
-- Distributed System Design  
-- Retry & Circuit Breaker Patterns  
-- Database Modeling & Optimization  
-- Observability (Logs, Metrics, Tracing)  
-- Clean Architecture & SOLID  
+Backend engineering leader specializing in **scalable distributed systems** within high-integrity financial environments.
+
+I design and evolve backend architectures that prioritize:
+
+- Reliability under failure  
+- Scalability under growth  
+- Observability under complexity  
+- Maintainability under change  
+
+Currently leading backend architecture and technical direction for enterprise systems, while transitioning toward a full **Backend / Software Architect** role.
 
 ---
 
-## ⚙️ Tech Stack
+## Architectural Expertise
 
-### Backend
+### System Design
+- Microservices architecture
+- Event-driven system design (Kafka)
+- Domain-driven boundaries
+- API design & contract governance
+- Service decomposition strategies
+
+### Distributed Systems
+- Asynchronous workflows
+- Retry & backoff strategies
+- Circuit breaker patterns
+- Idempotency & consistency models
+- Failure isolation & resilience engineering
+
+### Data & Performance
+- Transactional system modeling
+- Query optimization
+- Throughput and latency tuning
+- High-volume data processing
+
+### Observability
+- Structured logging strategy
+- Metrics instrumentation
+- Distributed tracing
+- Production incident analysis
+
+---
+
+## Technology Stack
+
+### Core Backend
 - Java (8 → 21)
 - Spring Boot (2.x → 3.x)
 - Spring Security
 - Hibernate / JPA
-- REST APIs
+- RESTful API design
 
-### Messaging
+### Messaging & Streaming
 - Apache Kafka
-- Consumer Groups
-- Retry & Dead Letter Topics
-- Idempotent Producers
+- Consumer group scaling
+- Retry topics & Dead Letter Topics
+- Idempotent producers
 
-### Databases
+### Data Stores
 - Oracle
 - PostgreSQL
 - MySQL
 - MongoDB
 
-### Cloud & DevOps
+### Cloud & Delivery
 - AWS (EC2, ECS, IAM, S3)
 - Docker
 - Jenkins
@@ -61,50 +84,67 @@ I currently own backend architecture and technical decisions for enterprise syst
 
 ---
 
-## 🏆 Selected Projects
+## Selected Architecture Initiatives
 
-### 💰 Financial Management Platform
-**Role:** Tech Lead  
+### Financial Management Platform  
+**Role:** Backend Tech Lead  
 **Domain:** US Federal Finance  
 
-- Designed secure backend architecture  
-- Implemented Kafka-based async workflows  
-- Supported high-throughput transactional systems  
-- Ensured auditability & compliance  
-- Led Spring Boot 3 migration  
+- Architected secure backend workflows for regulated financial processing
+- Designed Kafka-based event-driven pipelines
+- Enabled high-throughput transactional processing
+- Implemented audit-compliant data integrity mechanisms
+- Led migration to Spring Boot 3 & modernized service architecture
 
 ---
 
-### 📊 Enterprise Reporting Platform
+### Enterprise Reporting Platform
 
-- Built scalable PDF & Excel pipelines  
-- Optimized large dataset processing  
-- Automated scheduled reporting  
-- Improved reporting efficiency by ~60%  
-
----
-
-### 🔄 Common Services Platform
-
-- Centralized exception handling  
-- Shared API response framework  
-- Reusable security components  
-- Unified logging & validation  
-- Reduced duplication across services  
+- Designed scalable reporting architecture
+- Built asynchronous report generation pipelines
+- Optimized large dataset handling
+- Automated scheduled reporting workflows
+- Improved reporting efficiency by ~60%
 
 ---
 
-## 📘 Currently Exploring
+### Common Services Platform
 
-- Advanced Kafka architecture patterns  
-- Resilient event-driven design  
-- Observability tooling  
-- Performance tuning at scale  
-- Architect-level system design thinking  
+- Established shared architectural foundations across microservices
+- Centralized exception & response frameworks
+- Introduced reusable security components
+- Standardized logging and validation strategies
+- Reduced cross-service duplication significantly
 
 ---
 
-## 📊 GitHub Stats
+## Current Architectural Focus
+
+- Advanced Kafka architecture patterns
+- Exactly-once and consistency guarantees
+- Event sourcing & CQRS exploration
+- Production-grade observability
+- Designing for scale beyond current load
+- Moving from feature ownership → architecture ownership
+
+---
+
+## Engineering Philosophy
+
+> Architecture is not about complexity.  
+> It is about clarity, boundaries, and long-term survivability.
+
+Core principles:
+
+- Design for failure first
+- Prefer evolution over rewrites
+- Remove accidental complexity
+- Make systems observable by default
+- Optimize for long-term maintainability
+
+---
+
+## GitHub Activity
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=nehru-usare&show_icons=true&hide_border=true)
 
@@ -112,17 +152,4 @@ I currently own backend architecture and technical decisions for enterprise syst
 
 ---
 
-## 💡 Engineering Philosophy
-
-> Good systems are defined not by delivery speed,  
-> but by how well they survive scale, failure, and change.
-
-- Architecture before implementation  
-- Simplicity over accidental complexity  
-- Observability as first-class concern  
-- Reliability over shortcuts  
-- Continuous learning  
-
----
-
-⭐ Backend Tech Lead focused on building scalable distributed systems and evolving toward architecture leadership.
+Backend Engineering Lead focused on evolving into architecture leadership and building systems that endure scale, failure, and change.
